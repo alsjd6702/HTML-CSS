@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블럭인라인</title>
+    <style>
+        /* body {text-align: center;} */
+        /* body{overflow: hidden;} */
+        /* 위의 경우는 hidden 넣어줘도 부모가 높이를 찾지 못함. So, clear 넣어줌. or, article처럼 부모를 만들어 주어도 됨. */
+        /* article{overflow: hidden;} */
+        /* 위 대신에 class를 넣어 clearfix로 지정해주어도 됨. */
+        .clearfix::before,.clearfix::after {content: ""; display: block;}
+        .clearfix::after {clear: both;}
+        div,span {/* width: 100px; */border: 1px solid;/* display: inline-block; margin: 50px auto; */}
+        div {float: left;}
+        span {float: right;}
+        /* 인라인속성은 크기를 주어도 가지지 못함. */
+        /* span{display: inline-block;} */
+        /* 위의 경우는, inline의 속성과 block의 속성을 모두 가짐. */
+        section {width: 50px; border: 1px solid; margin: 50px auto;/* clear: both; */}
+        nav{float: right;}
+        nav span{float: left;}
+    </style>
+</head>
+<body>
+    <article class="clearfix">
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <span>인라인요소1</span>
+        <span>인라인요소2</span>
+        <span>인라인요소3</span>
+        <span>인라인요소4</span>
+        <span>인라인요소5</span>
+        <!-- right 정렬 순서 주의(오른쪽부터 진행함) -->
+        <!-- 거꾸로 되지 않도록 하기 위해, 안리인에는 float left를 주고, 부모로 묶어 부모에 float right을 주면 됨. -->
+        <section>블록요소</section>
+    </article>
+    <section>블록요소</section>
+    <article class="clearfix">
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <span>인라인요소</span>
+        <span>인라인요소</span>
+        <span>인라인요소</span>
+        <span>인라인요소</span>
+        <span>인라인요소</span>
+    </article>
+    <section>블록요소</section>
+    <article class="clearfix">
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <div>블럭요소</div>
+        <nav>
+            <span>인라인요소1</span>
+            <span>인라인요소2</span>
+            <span>인라인요소3</span>
+            <span>인라인요소4</span>
+            <span>인라인요소5</span>
+        </nav>
+    </article>
+    <section>블록요소</section>
+</body>
+</html>
