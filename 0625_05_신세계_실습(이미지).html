@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신세계_실습(이미지)</title>
+    <style>        
+        @font-face {
+            font-family: nanumbarunl;
+            src: url(webfonts/NanumBarunGothicLight.otf) format("opentype");}
+        *{margin: 0; padding: 0;}
+        section{width: 920px; margin: 20px auto; overflow: hidden;}
+        article{width: 450px; border: 1px solid #ccc; font-family: nanumbarunl; float: left;}
+        /* article:first-child{*margin-right: 50px;}
+        padding과 border의 크기까지 모두 포함하여 고려해야 함.*/
+        article:last-child{float: right;}
+        article div{float: left; width: 50%;}
+        article div:last-child{/*padding: 0 2%; width: 45%; */word-break: keep-all;}
+        article div h3{/*margin: 20px 0;*/line-height: 60px; font-size: 20px; text-indent: 20px;}
+        article div p{line-height: 30px; color: #434343; width: 80%; margin: 0 auto;}
+        article img{vertical-align: middle;}
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <div>
+                <img src="/images/recruit_nav_list01.png" alt="recruit01">
+            </div>
+            <div>
+                <h3>인재상</h3>
+                <p>다양한 변화를 수용하면서 열린 마음으로 바른 길을 지향하는 참다운 인재를 추구합니다.</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <img src="/images/recruit_nav_list02.png" alt="recruit02">
+            </div>
+            <div>
+                <h3>인사제도</h3>
+                <p>능력과 업적에 따른 인사제도 실현, 인격과 개성을 존중하는 기업문화 정착을 추구합니다.</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <div>
+                <img src="/images/recruit_nav_list03.png" alt="recruit03">
+            </div>
+            <div>
+                <h3>복리후생</h3>
+                <p>일과 삶의 균형 각종 복리후생 제도를 통하여 직원들의 삶의 질 향상을 도모하고 있습니다.</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <img src="/images/recruit_nav_list04.png" alt="recruit04">
+            </div>
+            <div>
+                <h3>직무소개</h3>
+                <p>여러 분의 소중한 꿈을 신세계푸드에서 활짝 펼쳐나가시길 바랍니다.</p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
