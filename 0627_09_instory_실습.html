@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instory</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{background-color: #d3222a;}
+        .wrapper{width: 1000px; margin: 0 auto;}
+        .top{text-align: right;}
+        /* text-align은 인라인 속성은 가능하며, img는 인라인 속성임. */
+        .pattern{background-image: url(images/pattern.gif); height: 82px;}
+        .main{overflow: hidden; height: 625px;}
+        /* 높이를 주어서 overflow: hidden이 의미가 없어짐. 하지만, 높이가 맞지 않아서 다시 부여함. 부여함으로써 사이 틈이 사라짐.
+        부여해도 사이 틈이 사라지지 않으면, 다시 없애고 폰트 사이즈로 조절해볼 수 있음.*/
+        .main>div{float: left;}
+        .main>div:last-child{width: 514px; height: 100%; background-image: url(images/index_main_02.gif);}
+        .foot{clear: left; height: 100px; background-color: #fff;}
+        /* 위로 함께 끌려 올라간 floot의 속성을 clear로 없애줌. */
+    </style>
+</head>
+<body>   
+    <div class="wrapper">
+        <div class="top">
+            <img src="images/index_top.gif" alt="index_top">
+        </div>
+        <div class="pattern">
+            <img src="images/index_pattern.gif" alt="index_pattern">
+        </div>
+        <div class="main">
+            <div><img src="images/index_main_01.gif" alt="index_main_01"></div>
+            <div><p>Home 메인 페이지입니다</p></div>
+        </div>
+        <div class="foot">
+            <img src="images/copyright.gif" alt="copyright">
+        </div>
+    </div>   
+</body>
+</html>
