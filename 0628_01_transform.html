@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        div:first-child{width: 500px; height: 500px; border: 1px solid;
+            transform: matrix(1, -0.3, 0, 1, 0, 0);}
+        p{width: 100px; height: 100px; background: #ccc; margin: 20px;}
+        p:nth-child(1){transform: translate(100px,-50px);}
+        /* p:nth-child(1){transform: translateY(-50px);} */
+        /* p:nth-child(1){transform: translateX(100px);} */
+        p:nth-child(2){transform: translate(500px) scale(0.5);}        
+        p:nth-child(3){transform: scale(0.5) translate(500px);}
+        /* transform의 경우, translate을 먼저 주는 것과 scale을 먼저 주는 것이 결과 값이 다름. 크기가 지정이 되어 있을 때, 그 크기 만큼 이동하고 줄어드는 것과 먼저 크기를 줄이고, 줄인 크기 만큼 이동하기 때문에 이동 거리가 다른 것. */
+        p:nth-child(4){transform: skew(-30deg);}
+        /* X나 Y를 쓰지 않고, ',' 없이 값을 1개만 쓰면 X만 반영함. Y는 반영 값이 없는 것으로 인식함. */
+        p:nth-child(5){transform: rotateY(80deg);}
+        /* 위의 경우, X와 Y를 기준으로 회전을 하면 입체로 회전하는 것.
+        X나 Y를 기준으로 주지 않으면 2차원으로 양옆으로 회전함. */
+        div:nth-child(2){width: 500px; height: 500px; border: 1px solid;
+                         transform: skewY(-30deg);}
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>5</p>
+    </div>
+    <div></div>
+</body>
+</html>
