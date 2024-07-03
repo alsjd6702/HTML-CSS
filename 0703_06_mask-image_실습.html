@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mask-image</title>    
+    <style>
+        /* p{mask-image: url(images/w3logo.png); mask-repeat: no-repeat;} */
+        *{margin: 0; padding: 0;}
+        ul{list-style: none; width: 321px; height: 378px; margin: 50px 50px;}
+
+        li>p{width: 72px; height: 72px; background-color: #000; mask-repeat: no-repeat;}
+        li:first-child>p{mask-image: url(images/kcc_item1.svg);}
+        li:nth-child(2)>p{mask-image: url(images/kcc_item2.svg);}
+        li:nth-child(3)>p{mask-image: url(images/kcc_item3.svg);}
+        li:nth-child(4)>p{mask-image: url(images/kcc_item4.svg);}
+        li:nth-child(5)>p{mask-image: url(images/kcc_item5.svg);}
+        li:nth-child(6)>p{mask-image: url(images/kcc_item6.svg);}
+        li:hover>p{background-color: #be8226; mask-repeat: no-repeat;}
+
+        li{border-bottom: 2px solid #000; overflow: hidden; padding-bottom: 5px; cursor: pointer;}
+        li>p{float: left;}
+        li>div{float: right;}
+        li>div>p,li>div>h1{float: left;}              
+        li>div>p{line-height: 72px; font-weight: bold;}
+        li:hover>div>p{color: #be8226;}
+        li:hover{border-bottom: 2px solid #be8226;}
+
+        li>div>h1{position: relative; top: 15px; padding: 0 10px;}
+        li:hover>div>h1{content: url(images/kcc_arrow.png);}
+    </style>
+</head>
+<body>
+    <!-- <p><img src="images/photo1.jpg" alt="photo1"></p> -->
+    <section> 
+        <ul>
+            <li>                
+                <p></p>
+                <div>
+                    <p>건축</p>
+                    <h1><img src="images/kcc_arrow_2.png" alt="kcc_arrow_2"></h1>
+                </div>                
+            </li>
+            <li>                
+                <p></p>
+                <div>
+                    <p>선박·해양플랜트</p>
+                    <h1><img src="images/kcc_arrow_2.png" alt="kcc_arrow_2"></h1>
+                </div>                
+            </li>
+            <li>                
+                <p></p>
+                <div>
+                    <p>플랜트</p>
+                    <h1><img src="images/kcc_arrow_2.png" alt="kcc_arrow_2"></h1>
+                </div>                
+            </li>
+            <li>                
+                <p></p>
+                <div>
+                    <p>전자·가전·전기</p>
+                    <h1><img src="images/kcc_arrow_2.png" alt="kcc_arrow_2"></h1>
+                </div>                
+            </li>
+            <li>                
+                <p></p>
+                <div>
+                    <p>산업 기타</p>
+                    <h1><img src="images/kcc_arrow_2.png" alt="kcc_arrow_2"></h1>
+                </div>                
+            </li>           
+        </ul>
+    </section>    
+</body>
+</html>
