@@ -21,17 +21,18 @@
         header > .left > p{width: 200px; height: 100px;}
         header > .left > p img{width: 126px; height: 40px; position: relative; top: 50px; transform: translateY(-50%);}
         
+        header > .left > .lsub{position: relative;}
         header > .left > .lsub > li{width: 140px; text-align: center;}
         header > .left > .lsub > li > a{color: #000; text-transform: uppercase; font-weight: bold; line-height: 100px;}
-        header > .left > .lsub .dsub{font-size: 14px; opacity: 0; overflow: hidden; transition: 0.5s;}
+        header > .left .lsub .dsub{font-size: 14px; opacity: 0; overflow: hidden; transition: 0.5s; position: absolute; left: 0; top: 0;}
         header > .left > .lsub:hover .dsub{opacity: 1;}
-        header > .left > .lsub .dsub a{color: #aaa;}
+        header > .left > .lsub .dsub a{color: #000;}
         header > .left > .lsub .dsub  li{padding: 10px 0;}
         header > .left > .lsub .dsub  li:first-child{padding-top: 0;}
 
         header > .right > .rsub li a{line-height: 100px; padding: 10px; font-size: 14px; font-weight: bold; color: #000;}
         
-        .con{width: 1910px;}
+        .con{width: 1910px; margin: 0 auto;}
         .con > img{width: 1815px; height: 796px; margin: 0 auto;}
     </style>
 </head>
@@ -59,6 +60,9 @@
                 </li>
                 <li>
                     <a href="#">articles</a>
+                    <ul class="dsub">
+                        <li></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">support</a>
