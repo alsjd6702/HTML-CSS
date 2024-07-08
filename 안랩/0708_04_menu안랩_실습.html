@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu안랩</title>
+    <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .bg{width: 100%; background-color: #111;}
+    .wrap{width: 780px; margin: 0 auto; padding: 50px 0; background-color: #111;}
+    .wrap .top{width: 100%; height: 132px; margin: 0 0 100px;}
+    .wrap .top p img{width: 300px; height: 17px;}
+    .wrap .top p:last-child{color: #fff; font-size: 28px; margin: 35px 0;}
+    
+    .wrap .bottom ul{position: relative;}
+    .wrap .bottom ul li{width: 100%;}
+    .wrap .bottom ul li .contitle{width: 413px; height: 65px; border-bottom: 1px solid #989898;}
+    .wrap .bottom ul li .contitle p{font-size: 17.5px; color: #989898; font-weight: bold; float: left; padding: 17px 0; transition: 0.3s;}
+    .wrap .bottom ul li .contitle p:first-child{margin: 0 17px 0 0;}
+    .wrap .bottom ul li .contitle p:last-child img{vertical-align: middle; opacity: 0;}
+    .wrap .bottom ul li .contitle:hover {border-bottom: 2px solid #fff;}
+    .wrap .bottom ul li .contitle:hover p{font-size: 21px; color: #2970FF}
+    .wrap .bottom ul li .contitle:hover p img{opacity: 1;}
+    .wrap .bottom ul li .contitle:hover ~ .con{opacity: 1;}
+    
+    .wrap .bottom ul li .con{width: 523px; position: absolute; left: 530px; top: -70px; opacity: 0;}        
+    .wrap .bottom ul li .con>p:first-child img{width: 436px; height: 83px;}
+    .wrap .bottom ul li .con>p:nth-child(2){margin: 52.5px 0 61.25px; font-size: 15.75px; color: #fff;}
+    .wrap .bottom ul li .con .button{width: 150px; height: 44px; overflow: hidden; border: 1px solid #fff; border-radius: 4px;}
+    .wrap .bottom ul li .con .button p:first-child{margin: 0 13px 0 0; font-size: 14px; font-weight: bold; color: #fff; line-height: 44px;}
+    .wrap .bottom ul li .con .button p:nth-child(2) img{width: 17.5px; height: 17.5px; vertical-align: middle;}
+    .wrap .bottom ul li .con .button p{float: left;}
+
+    </style>
+</head>
+<body>
+   <div class="bg">
+       <div class="wrap">
+        <div class="top">
+            <p><img src="images/ahn-plus.png" alt="ahn-plus"></p>
+            <p>디지털 비즈니스 혁신을 위한<br>최적의 보안 플랫폼</p>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li>
+                    <div class="contitle">
+                        <P>AhnLab CONNECT PLUS</P>
+                        <p><img src="images/ahn-plus-connect-after.png" alt="connect_after"></p>
+                    </div>
+                    <div class="con">
+                        <p><img src="images/connect.png" alt="connect"></p>
+                        <p>nLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+                            연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</p>
+                        <div class="button">
+                            <p>View More</p>
+                            <p><img src="images/more.svg" alt="more"></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contitle">
+                        <P>AhnLab CLOUD PLUS</P>
+                        <p><img src="images/ahn-plus-cloud-after.png" alt="cloud_after"></p>
+                    </div>
+                    <div class="con">
+                        <p><img src="images/could.png" alt="cloud"></p>
+                        <p>AhnLab CLOUD PLUS는 클라우드 워크로드 보안 플랫폼(CWPP)부터
+                            클라우드 최적화 방화벽, IPS 등 최상의 기술력을 갖춘 솔루션을 통해
+                            고객의 디지털 혁신 기반을 마련합니다.</p>
+                        <div class="button">
+                            <p>View More</p>
+                            <p><img src="images/more.svg" alt="more"></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contitle">
+                        <P>AhnLab ENDPOINT PLUS</P>
+                        <p><img src="images/ahn-plus-endpoint-after.png" alt="endpoint_after"></p>
+                    </div>
+                    <div class="con">
+                        <p><img src="images/endpoint.png" alt="endpoint"></p>
+                        <p>AhnLab ENDPOINT PLUS는 PC, 서버, 모바일, OT 기기 등 여러 엔드포인트
+                            자산에 대한 위협을 체계적으로 방어하는 엔드포인트 보안 플랫폼입니다.</p>
+                        <div class="button">
+                            <p>View More</p>
+                            <p><img src="images/more.svg" alt="more"></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contitle">
+                        <P>AhnLab NETWORK PLUS</P>
+                        <p><img src="images/ahn-plus-network-after.png" alt="network_after"></p>
+                    </div>
+                    <div class="con">
+                        <p><img src="images/network.png" alt="network"></p>
+                        <p>AhnLab NETWORK PLUS는 방화벽, IPS, 디도스 대응, 샌드박스 등
+                            여러 솔루션들이 유기적으로 연동하여 최상의 보안 역량을 제공하는
+                            네트워크 보안 플랫폼입니다.</p>
+                        <div class="button">
+                            <p>View More</p>
+                            <p><img src="images/more.svg" alt="more"></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contitle">
+                        <P>AhnLab SERVICE PLUS</P>
+                        <p><img src="images/ahn-plus-service-after.png" alt="service_after"></p>
+                    </div>
+                    <div class="con">
+                        <p><img src="images/service.png" alt="service"></p>
+                        <p>안랩의 보안 전문가들이 수십 년간 축적해온 경험과 노하우를 바탕으로
+                            최상의 보안 서비스를 제공해 안전한 비즈니스 환경을 조성합니다.</p>
+                        <div class="button">
+                            <p>View More</p>
+                            <p><img src="images/more.svg" alt="more"></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+       </div>
+   </div>
+</body>
+</html>
