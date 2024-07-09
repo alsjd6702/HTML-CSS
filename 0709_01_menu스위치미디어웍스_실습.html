@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu스위치미디어웍스</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+
+        .wrap{width: 100%; overflow: hidden; padding: 63px;}
+        .wrap .left{float: left; width: 50%; padding-left: 80px; box-sizing: border-box;}
+        .wrap .right{float: right; width: 50%; padding-left: 20px; box-sizing: border-box;}
+
+        .left p{font-size: 117px; text-transform: capitalize; line-height: 100px;}
+        .left p:last-child{text-decoration: underline;}
+
+
+        .right ul li{width: 727px; position: relative;}
+        .right ul li p:first-child{font-size: 30px; padding: 15px 0; border-top: 1px solid;}
+        .right ul li p:nth-child(2){font-size: 14px; color: #0000009c; height: 0; overflow: hidden;}
+        .right ul li:last-child p:nth-child(2){border-bottom: 1px solid;}
+
+        .right ul li p:first-child::after{content: "+"; font-size: 30px; position: absolute; left: 707px; top: 13px;}
+
+        .right ul li:hover p:nth-child(2){height: 51px; transition: 0.3s;}
+        .right ul li:hover p:first-child::after{content: "-"; font-size: 30px;}       
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">
+            <p>our</p>
+            <p>services.</p>
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <p>UX/UI</p>
+                    <p>Concept Proposal / UX Planning /  UI Design</p>
+                </li>
+                <li>
+                    <p>Motion</p>
+                    <p>Scenario Planning / 2D Motion graphic Design / 3D Modeling & Animation / 3D VFX</p>
+                </li>
+                <li>
+                    <p>Production</p>
+                    <p>Pre-Production / Production / Post-Production</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
