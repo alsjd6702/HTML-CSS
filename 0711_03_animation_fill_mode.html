@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+        div{width: 100px; height: 100px; background: green; margin: 10px; animation: move 5s 1s;}
+        div.none{animation-fill-mode: none;}             
+        div.forwards{animation-fill-mode: forwards;}             
+        /* 대기하는 동안 위는 원래의 서식 유지, 아래는 다음의 서식 */
+        div.backwards{animation-fill-mode: backwards;}             
+        div.both{animation-fill-mode: both;}       
+        /* forwards와 both는 끝나고도 서식 유지 */
+
+        @keyframes move {
+            0%{transform: translateX(0); background: red;}
+            100%{transform: translateX(500px); background: yellow;}
+        }
+    </style>
+</head>
+<body>
+   <div class="none">none</div>
+   <div class="forwards">forwards</div>
+   <div class="backwards">backwards</div>
+   <div class="both">both</div>
+</body>
+</html>
