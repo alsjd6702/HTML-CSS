@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ddd</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .blurBox{width: 500px; height: 300px; margin: 50px; position: relative; overflow: hidden;}
+        .imgBox{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%; height: 100%; transition: 0.5s; clip-path: inset(0); z-index: 2;}
+        .blurBox img{width: 100%; height: 100%; object-fit: cover;}
+        .blurBox>img{filter: blur(5px);}
+        .blurBox:hover .imgBox{clip-path: inset(10px round 250px 250px 0 0);}
+        .blurBox::before{content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(225, 225, 225, 0.3); width: 100%; height: 100%; z-index: 1;}
+    </style>
+</head>
+<body>
+    <div class="blurBox">
+        <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="">
+        <div class="imgBox">
+            <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="">    
+        </div>
+    </div>
+</body>
+</html>
