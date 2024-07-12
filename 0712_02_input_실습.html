@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <style>
+        :focus{outline: none;}
+        fieldset{height: 30px; border-radius: 5px;}
+        img,p{float: left;}
+        img{margin: 5px 0;}
+        p{margin: 0; padding: 0 0 0 10px; line-height: 35px;}
+        input{border: none; font-size: 20px;}
+    </style>
+</head>
+<body>
+    <h3>
+        Input field with an icon inside
+    </h3>
+    <form action="">
+        <fieldset>
+            <img src="images/searchicon.png" alt="searchicon">
+            <p><input type="search" placeholder="Search..." onfocus="this.placeholder=''" size="100%"></p>
+        </fieldset>
+    </form>
+</body>
+</html>
