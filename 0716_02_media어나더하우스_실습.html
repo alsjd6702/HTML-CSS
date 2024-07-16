@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{position: relative; width: 1920px;}
+        div.logo{position: absolute; left: 960px; top: 25px; transform: translateX(-50%);}
+        div.text{position: absolute; left: 960px; top: 540px; transform: translate(-50%,-50%); width: 1100px;}
+        div.text p{color: #fff; font-weight: bold; text-align: center;}
+        div.text p:first-child{font-size: 20px; padding-bottom: 30px;}
+        div.text p:last-child{font-size: 36px; line-height: 65px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <video autoplay muted width="1920" loop>
+            <source src="video/another_house.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <img src="images/another_house.png" alt="logo">
+        </div>
+        <div class="text">
+            <p>어나더하우스</p>
+            <p>사람을 좋아하는 LG전자가 여행을 좋아하는 당신을 위해 준비한<br>어나더하우스로 여행을 떠나보세요</p>
+        </div>
+    </div>
+</body>
+</html>
