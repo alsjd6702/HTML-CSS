@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        .wrap{width: 1376px; margin: 50px auto;}
+
+        .wrap ul{display: flex; justify-content: space-between;}
+        .wrap ul li{height: 406px; margin-right: 20px; border-radius: 12px; position: relative; overflow: hidden; cursor: pointer; flex-basis: 15%;transition: 0.5s;}
+        .wrap ul li:last-child{margin-right: 0;} 
+        .wrap ul:hover li:hover{flex-basis: 55%;}
+        .wrap ul:hover li:not(:hover){flex-basis: 15%;}
+
+        .wrap ul li img{width: 100%; height: 100%; object-fit: cover; transition: 0.5s;}
+        .wrap ul li:hover img{transform: scale(1.1);}
+          
+        .wrap ul li .txt{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5); transition: 0.5s;}
+        .wrap ul li:hover .txt {padding: 30px 45px; background: none;}
+        .wrap ul li .txt p{color: #fff; font-size: 18px; line-height: 35px;}
+        .wrap ul li .txt p:first-child{opacity: 0; white-space: nowrap;}
+        .wrap ul li .txt p:last-child{font-size: 25px; font-weight: bold; transition: 0.5s; text-align: center;}
+        .wrap ul li:hover .txt p:first-child{opacity: 1;}
+        .wrap ul li:hover .txt p:last-child{font-size: 30px; text-align: left;}
+
+    </style>
+</head>
+<body>
+   <div class="wrap">
+    <ul>
+        <li>
+            <a href="#"><img src="images/new_esg_img1.jpg" alt="lg_esg"></a>
+            <div class="txt">
+                <p>LG생활건강이 만드는</p>
+                <p>지속 가능한 삶</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/new_esg_img2.jpg" alt="lg_esg"></a>
+            <div class="txt">
+                <p>지구를 물려주기 위한</p>
+                <p>우리의 약속</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/new_esg_img3.jpg" alt="lg_esg"></a>
+            <div class="txt">
+                <p>고객의 건강과 안전을</p>
+                <p>지키는 열정</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/new_esg_img4.jpg" alt="lg_esg"></a>
+            <div class="txt">
+                <p>공평하고 행복한 세상을 만들기 위한</p>
+                <p>나눔과 포용</p>
+            </div>
+        </li>
+    </ul>
+   </div>
+</body>
+</html>

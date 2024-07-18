@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_mad_for_garlic</title>
+    <style>      
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+
+    .wrap{width: 1503px; height: 825px; margin: 50px auto;}
+    .wrap .total{display: flex; font-size: 0;} 
+    .wrap .total li{position: relative;}
+    .wrap .total li p{position: absolute; left: 50%; top: 0; transform: translateX(-50%);}
+
+    .wrap .total .sub1{display: flex; flex-direction: column;}
+    .wrap .total .sub1 li{width: 245.99px;}
+    .wrap .total .sub1 li img{width: 100%;}
+
+    .wrap .total .sub2{display: flex; flex-direction: column;}
+    .wrap .total .sub2 li:first-child{height: 491.98px;}
+    .wrap .total .sub2 li img{height: 100%;}
+    
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="total">
+            <li>
+                <img src="images/mfg2_1.jpg" alt="mfg2">
+                <p><img src="images/section2-list_logo.png" alt="logo"></p>
+            </li>
+            <li>
+                <ul class="sub1">
+                    <li><img src="images/mfg2_2.png" alt="mfg2"></li>
+                    <li><img src="images/mfg2_3.png" alt="mfg2"></li>
+                    <li><img src="images/mfg2_4.jpg" alt="mfg2"></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="sub2">
+                    <li><img src="images/mfg2_5.png" alt="mfg2"></li>
+                    <li><img src="images/mfg2_6.png" alt="mfg2"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
