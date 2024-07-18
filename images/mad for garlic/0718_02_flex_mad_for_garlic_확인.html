@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_mad_for_garlic</title>
+    <style>      
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+    .list{width: 1504px; margin: 0 auto;}
+    .list > ul{display: flex; flex-wrap: wrap; font-size: 0;}
+    /* .list > ul img{display: block;} */
+    .list > ul > li{position: relative;}
+    .list > ul > li .over{font-size: 16px; position: absolute; left: 0; top: 0; display: flex; justify-content: center; align-items: center; width: 100%;height: 100%; text-align: center; background: rgba(0,0,0,0); transition: 0.5s;}
+    .list > ul > li:hover .over{background: rgba(0,0,0,0.5);}
+    .list > ul > li .over p{color: #fff; text-transform: uppercase;}
+    .list > ul > li .over .inner{transform: translateY(0); transition: 0.5s;}
+    .list > ul > li .over .inner p:first-child{opacity: 0; transition: 0.5s 0.2s;}
+    .list > ul > li .over .inner a{opacity: 0; transition: 0.5s 0.2s;}
+    .list > ul > li:hover .over .inner p:first-child{opacity: 1;}
+    .list > ul > li:hover .over .inner a{opacity: 1;}
+    .list > ul > li:hover .over .inner{transform: translateY(-20px);}
+
+
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li>
+                <img src="images/mfg1.png" alt="mfg">
+                <div class="over">
+                    <div class="inner">
+                        <p><img src="images/m-icon_brand.png" alt="icon"></p>
+                        <p>bread & starter</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <ul>
+                    <li><img src="images/mfg2.png" alt="mfg"></li>
+                    <li><img src="images/mfg3.png" alt="mfg"></li>
+                </ul>
+            </li>
+            <li><img src="images/mfg4.jpg" alt="mfg"></li>
+            <li><img src="images/mfg5.png" alt="mfg"></li>
+            <li><img src="images/mfg6.jpg" alt="mfg"></li>
+            <li><img src="images/mfg7.jpg" alt="mfg"></li>
+            <li><img src="images/mfg8.jpg" alt="mfg"></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_another_house_hover</title>
+    <style>
+        *{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		.review{width: 1440px;margin: 50px auto;}
+		.review ul{display: flex;justify-content: space-evenly;}
+		.review ul li{display: flex;flex-direction: column;justify-content: space-between;width: 215px;}
+		.review ul li .inner{display: flex; justify-content: space-between;}
+		.review ul li:first-child,.review ul li:nth-child(3){width: 450px;}
+		.review ul li img{width: 100%;height: 100%;object-fit: cover;}
+		.review ul li:nth-child(2),.review ul li:nth-child(4){height: 460px;}
+		.review ul li:nth-child(2) div,.review ul li:nth-child(4) div{height: 100%;}
+		.review ul li:nth-child(1)>div:first-child,.review ul li:nth-child(3)>div:last-child{height: 226px;}
+		
+		.review ul li .inner div{width: 215px;height: 215px; position: relative;}
+		.review ul li p{width: 100%;height: 100%;}
+
+		.review ul li > div{position: relative; overflow: hidden;}
+		.review ul li p.box{position: absolute; left: 0; top: -227px; background: rgba(0,0,0,.6); padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;}
+		.review ul li p.box a{color: #fff; text-decoration: none;}
+		.review ul li p.box a span{display: block;}
+		.review ul li p.box a span:first-child{font-size: 20px; font-weight: bold; padding-bottom: 10px;}
+		.review ul li p.box a span:nth-child(2){font-size: 14px; font-weight: bold;}
+		.review ul li p.box a:last-child{display: block; text-align: right; text-decoration: underline;text-underline-offset: 7px; font-size: 14px;}	
+
+		.review ul li > div p:first-child:hover ~ p.box{top: 0;}
+		.review ul li:nth-child(2) p.box, .review ul li:nth-child(4) p.box{top: -461px;}
+
+
+    </style>
+</head>
+<body>
+    <div class="review">
+		<ul>
+			<li>
+				<div>
+					<p><img src="images/another_house1.jpg" alt="another_house1"></p>
+					<p class="box">
+						<a href="#">
+							<span>3박4일 프라이빗 제주여행</span>
+							<span>두모음평집</span>
+						</a>
+						<a href="#">자세히 보기</a>
+					</p>
+				</div>
+				<div class="inner">
+					<div>
+						<p><img src="images/another_house2.jpeg" alt="another_house2"></p>
+						<p class="box">
+							<a href="#">
+								<span>3박4일 프라이빗 제주여행</span>
+								<span>두모음평집</span>
+							</a>
+							<a href="#">자세히 보기</a>
+						</p>
+					</div>
+					<div>
+						<p><img src="images/another_house3.jpeg" alt="another_house3"></p>
+						<p class="box">
+							<a href="#">
+								<span>3박4일 프라이빗 제주여행</span>
+								<span>두모음평집</span>
+							</a>
+							<a href="#">자세히 보기</a>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p><img src="images/another_house4.jpg" alt="another_house4"></p>
+					<p class="box">
+						<a href="#">
+							<span>3박4일 프라이빗 제주여행</span>
+							<span>두모음평집</span>
+						</a>
+						<a href="#">자세히 보기</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="inner">
+					<div>
+						<p><img src="images/another_house5.jfif" alt="another_house5"></p>
+						<p class="box">
+							<a href="#">
+								<span>3박4일 프라이빗 제주여행</span>
+								<span>두모음평집</span>
+							</a>
+							<a href="#">자세히 보기</a>
+						</p>
+					</div>
+					<div>
+						<p><img src="images/another_house6.jpeg" alt="another_house6"></p>
+						<p class="box">
+							<a href="#">
+								<span>3박4일 프라이빗 제주여행</span>
+								<span>두모음평집</span>
+							</a>
+							<a href="#">자세히 보기</a>
+						</p>
+					</div>
+				</div>
+				<div>
+					<p><img src="images/another_house7.jpeg" alt="another_house7"></p>
+					<p class="box">
+						<a href="#">
+							<span>3박4일 프라이빗 제주여행</span>
+							<span>두모음평집</span>
+						</a>
+						<a href="#">자세히 보기</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p><img src="images/another_house8.jpeg" alt="another_house8"></p>
+					<p class="box">
+						<a href="#">
+							<span>3박4일 프라이빗 제주여행</span>
+							<span>두모음평집</span>
+						</a>
+						<a href="#">자세히 보기</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
