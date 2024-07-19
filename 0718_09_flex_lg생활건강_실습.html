@@ -13,7 +13,8 @@
         .wrap{width: 1376px; margin: 50px auto;}
 
         .wrap ul{display: flex; justify-content: space-between;}
-        .wrap ul li{height: 406px; margin-right: 20px; border-radius: 12px; position: relative; overflow: hidden; cursor: pointer; flex-basis: 15%;transition: 0.5s;}
+        .wrap ul li{height: 406px; margin-right: 20px; border-radius: 12px; position: relative; overflow: hidden; cursor: pointer; flex-basis: 15%;transition: 0.5s;}        
+        .wrap ul li:first-child{flex-basis: 55%;}
         .wrap ul li:last-child{margin-right: 0;} 
         .wrap ul:hover li:hover{flex-basis: 55%;}
         .wrap ul:hover li:not(:hover){flex-basis: 15%;}
@@ -22,12 +23,20 @@
         .wrap ul li:hover img{transform: scale(1.1);}
           
         .wrap ul li .txt{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5); transition: 0.5s;}
-        .wrap ul li:hover .txt {padding: 30px 45px; background: none;}
+        .wrap ul li:hover .txt,
+        .wrap ul li:first-child .txt{padding: 30px 45px; background: none;}
         .wrap ul li .txt p{color: #fff; font-size: 18px; line-height: 35px;}
         .wrap ul li .txt p:first-child{opacity: 0; white-space: nowrap;}
         .wrap ul li .txt p:last-child{font-size: 25px; font-weight: bold; transition: 0.5s; text-align: center;}
-        .wrap ul li:hover .txt p:first-child{opacity: 1;}
-        .wrap ul li:hover .txt p:last-child{font-size: 30px; text-align: left;}
+
+        .wrap ul li:hover .txt p:first-child,
+        .wrap ul li:first-child .txt p:first-child{opacity: 1;}
+        .wrap ul li:hover .txt p:last-child,
+        .wrap ul li:first-child .txt p:last-child{font-size: 30px; text-align: left;}
+
+        .wrap ul:hover li:first-child:not(:hover) .txt{background: rgba(0,0,0,.5); padding: 0;}
+        .wrap ul:hover li:first-child:not(:hover) .txt p:first-child{opacity: 0; white-space: nowrap;}
+        .wrap ul:hover li:first-child:not(:hover) .txt p:last-child{font-size: 25px; text-align: center;}
 
     </style>
 </head>
