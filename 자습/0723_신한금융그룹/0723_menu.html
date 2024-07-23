@@ -5,22 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        .wrap{background: #ccc;}
+        .wrap header{width: 1903px; height: 92px; padding: 0 104px; display: grid; grid-template-columns: 20% 42% 10%; gap: 200px;}
+        
+        .wrap header .logo p{width: 211px; height: 92px;}
+        .wrap header .logo img{width: 100%; height: 100%;}
+
+        .wrap header nav .menu > li > a
+
+        .wrap header .lan{display: grid; grid-template-columns: 15% 20% 30%;}
+        .wrap header .lan p{color: #fff; font-size: 18px;}
+    </style>
 </head>
 <body>
     <!-- https://shinhangroup.com/kr/main -->
     <div class="wrap">
         <header>
             <div class="logo">
-                <img src="images/logo_wh.svg" alt="logo">
+                <p><img src="images/logo_wh.svg" alt="logo"></p>
             </div>
             <nav>
-                <ul>
+                <ul class="menu">
                     <li>
                         <a href="#">소개</a>
-                        <ul>
+                        <ul class="sub">
                             <li>
                                 <p>그룹 소개</p>
-                                <ul>
+                                <ul class="detail">
                                     <li><a href="#">신한금융그룹 소개</a></li>
                                     <li><a href="#">미션핵심가치그룹 비전</a></li>
                                     <li><a href="#">연혁</a></li>
@@ -29,9 +45,63 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="#">기업 지배구조</a>
+                        <ul class="sub">
+                            <li>
+                                <p>주주총회</p>
+                                <ul class="detail">
+                                    <li><a href="#">주주구성</a></li>
+                                    <li><a href="#">배당현황</a></li>
+                                    <li><a href="#">주주총회 관련자료</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자정보</a>
+                        <ul class="sub">
+                            <li>
+                                <p>공시정보</p>
+                                <ul class="detail">
+                                    <li><a href="#">수시공시</a></li>
+                                    <li><a href="#">경영공시</a></li>
+                                    <li><a href="#">사업보고서</a></li>
+                                    <li><a href="#">감사보고서</a></li>
+                                    <li><a href="#">영업보고서</a></li>
+                                    <li><a href="#">공고</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ESG</a>
+                        <ul class="sub">
+                            <li>
+                                <p>ESG 전략</p>
+                                <ul class="detail">
+                                    <li><a href="#">ESG 전략체계</a></li>
+                                    <li><a href="#">ESG 지배구조</a></li>
+                                    <li><a href="#">ESG 경영</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">PR센터</a>
+                        <ul class="sub">
+                            <li>
+                                <p><a href="#">보도자료</a></p>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <div class="lan"></div>
+            <div class="lan">
+                <p>KR</p>
+                <p><img src="images/link_arr_wh.svg" alt="arr"></p>
+                <p><img src="images/menu_ico_wh.svg" alt="ico"></p>
+            </div>
         </header>
     </div>
 </body>
