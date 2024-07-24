@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        section{width: 100%}
+        section .top{width: 1462px; height: 680px; margin: 50px auto; display: grid; grid-template-columns: 780px 554px; justify-content: space-between;}
+        section .top .img{margin-left: 128px;}
+        section .top .img p{width: 450px; height: 500px; background-image: url(images2/clip1.jpg); clip-path: url(#shape); animation-name: change; animation-duration: 3s; animation-delay: 1s; animation-iteration-count: infinite; animation-direction: alternate; animation-timing-function: linear;}
+
+        @keyframes change {
+            0%{background-image: url(images2/clip1.jpg);}           
+           100%{background-image: url(images2/clip1_1.jpg);}
+        }
+    </style>
+</head>
+<body>
+   <section>
+    <div class="top">
+        <div class="img">
+            <p></p>
+            <svg>
+                <clipPath id="shape" clipPathUnits="objectBoundingBox">
+                    <path class="st0" d="M0.95,0.6c0,0.22-0.18,0.4-0.4,0.4h-0.1c-0.22,0-0.4-0.18-0.4-0.4V0.4c0-0.22,0.18-0.4,0.4-0.4h0.1
+		                c0.22,0,0.4,0.18,0.4,0.4V0.6z"/>
+                </clipPath>
+            </svg>
+        </div>
+        <div class="txt">
+            <p>보다 좋은 품질의<span>제품</span>을</p>
+            <p>자동화된 생산라인과 첨단설비, 위생적인 환경을 구축하여<br>
+            오뚜기의 1등 제품을 우수한 품질로 제공합니다.</p>
+            <p><img src="images2/btn_more_yellow_pc.svg" alt="arrow"></p>
+        </div>
+    </div>
+   </section>
+</body>
+</html>

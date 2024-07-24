@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        section{position: relative;}
+        section p{clip-path: url(#path1);}
+        svg{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+   <section>
+        <p><img src="images/photo1.jpg" alt="photo1"></p>
+        <svg>
+            <clipPath id="path1" clipPathUnits="userSpaceOnUse">
+            <!-- <clipPath id="path1" clipPathUnits="objectBoundingBox"> -->
+                <path d="M607.18,2.75c27.5,0.01,61.65,19.27,75.88,42.8L823.65,277.9c14.24,23.53,14.22,62.02-0.04,85.53
+		            L682.78,595.65c-14.26,23.51-48.43,42.74-75.93,42.73l-285.03-0.13c-27.5-0.01-61.65-19.27-75.88-42.8L105.35,363.1
+		            c-14.24-23.53-14.22-62.02,0.04-85.53L246.22,45.35c14.26-23.51,48.43-42.74,75.93-42.73L607.18,2.75z"/>
+	            <path d="M607.18,2.75c27.5,0.01,61.65,19.27,75.88,42.8L823.65,277.9c14.24,23.53,14.22,62.02-0.04,85.53
+		            L682.78,595.65c-14.26,23.51-48.43,42.74-75.93,42.73l-285.03-0.13c-27.5-0.01-61.65-19.27-75.88-42.8L105.35,363.1
+		            c-14.24-23.53-14.22-62.02,0.04-85.53L246.22,45.35c14.26-23.51,48.43-42.74,75.93-42.73L607.18,2.75z"/>
+            </clipPath>
+        </svg>
+   </section>
+</body>
+</html>
