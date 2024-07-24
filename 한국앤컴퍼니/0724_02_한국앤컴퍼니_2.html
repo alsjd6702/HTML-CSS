@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국앤컴퍼니 공식 웹사이트</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none;}
+
+        .wrap{width: 1180px; height: 1120px; margin: 50px auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;}
+        .wrap > div{width: calc(96% / 3);}
+
+        .wrap > div > div{position: relative; overflow: hidden;}
+        .wrap > div > div:last-child{align-items: flex-end;}
+
+        .wrap > div > div a{display: block;}
+        .wrap > div > div a img{transition: 0.5s; width: 100%; height: 100%; object-fit: cover;}
+        .wrap > div > div:hover a img{transform: scale(1.2);}
+        
+        .wrap > div > div > p{position: absolute; left: 40px; bottom: 60px; color: #fff; font-size: 24px;}        
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="con1">
+            <div class="d1">
+                <a href="#">
+                    <img src="images/earth1.jpg" alt="earth1">
+                </a>
+                <p>팬데믹 이전으로 부활한 CES<br>2024</p>
+            </div>
+            <div class="d2">
+                <a href="#">
+                    <img src="images/change4.jpg" alt="change4">
+                </a>
+                <p>지속 가능한 환경을 위한<br>지속 불가능한 규제</p>
+            </div>            
+        </div>
+        <div class="con2">
+            <div class="d3">
+                <a href="#">
+                    <img src="images/nissan2.jpg" alt="nissan2">
+                </a>
+                <p>닛한, 항상 도전한다</p>
+            </div>
+            <div class="d4">
+                <a href="#">
+                    <img src="images/preview5.jpg" alt="preview5">
+                </a>
+                <p>포뮬러 E 시즌 10 프리뷰</p>
+            </div>      
+        </div>
+        <div class="con3">
+            <div class="d5">
+                <a href="#">
+                    <img src="images/backstage3.jpg" alt="backstage3">
+                </a>
+                <p>포뮬러 E 백스테이지</p>
+            </div>
+            <div class="d6">
+                <a href="#">
+                    <img src="images/technology6.jpg" alt="technology6">
+                </a>
+                <p>챗 GPT 이후···<br>2024년 우리가 주목할 기술</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
