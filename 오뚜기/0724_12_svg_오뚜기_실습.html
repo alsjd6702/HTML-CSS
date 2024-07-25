@@ -7,33 +7,89 @@
     <title>svg</title>
     <style>
         *{margin: 0; padding: 0;}
-        section{width: 100%}
-        section .top{width: 1462px; height: 680px; margin: 50px auto; display: grid; grid-template-columns: 780px 554px; justify-content: space-between;}
-        section .top .img{margin-left: 128px;}
-        section .top .img p{width: 450px; height: 500px; background-image: url(images2/clip1.jpg); clip-path: url(#shape); animation-name: change; animation-duration: 3s; animation-delay: 1s; animation-iteration-count: infinite; animation-direction: alternate; animation-timing-function: linear;}
+        section{width: 100%; margin: 50px 0 0;}
+        section .total{margin: 0 auto;}
+        section .total{width: 1462px; height: 500px; display: grid; grid-template-columns: 780px 554px; justify-content: space-between;}
+        section .top .img, section .bottom .img, section .middle .txt{margin-left: 128px;}
+        
+        section .total .img p{width: 450px; height: 500px; animation-duration: 3.5s; animation-delay: 1s; animation-iteration-count: infinite; animation-direction: alternate; animation-timing-function: ease-in-out;}
+        section .top .img p{background-image: url(images2/clip1.jpg); clip-path: url(#shape1); animation-name: change1;}
+        section .middle .img p{background-image: url(images2/clip2.jpg); clip-path: url(#shape2); animation-name: change2;}
+        section .bottom .img p{background-image: url(images2/clip3.jpg); clip-path: url(#shape3); animation-name: change3;}
 
-        @keyframes change {
+        section .total .txt p:first-child{font-size: 48px; font-weight: bold; margin: 70px 0 30px; letter-spacing: -2px; line-height: 70px;}
+        section .total .txt p span{color: #ffed00; -webkit-text-stroke: 1px #000; }
+        section .total .txt p:nth-child(2){font-weight: 600; font-size: 19px; line-height: 32px; margin-bottom: 35px; letter-spacing: -1px;}
+        section .total .txt p img:hover{animation-name: moving; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate;}       
+
+        @keyframes change1 {
             0%{background-image: url(images2/clip1.jpg);}           
            100%{background-image: url(images2/clip1_1.jpg);}
+        }
+        @keyframes change2 {
+            0%{background-image: url(images2/clip2.jpg);}           
+           100%{background-image: url(images2/clip2_1.jpg);}
+        }
+        @keyframes change3 {
+            0%{background-image: url(images2/clip3.jpg);}           
+           100%{background-image: url(images2/clip3_1.jpg);}
+        }
+        @keyframes moving {
+            0%{transform: translateX(0);}
+            100%{transform: translateX(10px);}
         }
     </style>
 </head>
 <body>
    <section>
-    <div class="top">
+    <div class="total top">
         <div class="img">
             <p></p>
             <svg>
-                <clipPath id="shape" clipPathUnits="objectBoundingBox">
-                    <path class="st0" d="M0.95,0.6c0,0.22-0.18,0.4-0.4,0.4h-0.1c-0.22,0-0.4-0.18-0.4-0.4V0.4c0-0.22,0.18-0.4,0.4-0.4h0.1
-		                c0.22,0,0.4,0.18,0.4,0.4V0.6z"/>
+                <clipPath id="shape1" clipPathUnits="objectBoundingBox">
+                    <path class="st0" d="M0.59,0.99H0.41C0.18,0.99,0,0.81,0,0.58L0,0.4c0-0.22,0.18-0.4,0.4-0.4h0.22C0.83,0.01,1,0.18,1,0.39v0.19
+	                    C1,0.81,0.81,0.99,0.59,0.99z"/>
                 </clipPath>
             </svg>
         </div>
         <div class="txt">
-            <p>보다 좋은 품질의<span>제품</span>을</p>
+            <p>보다 좋은 품질의<br><span>제품</span>을</p>
             <p>자동화된 생산라인과 첨단설비, 위생적인 환경을 구축하여<br>
-            오뚜기의 1등 제품을 우수한 품질로 제공합니다.</p>
+               오뚜기의 1등 제품을 우수한 품질로 제공합니다.</p>
+            <p><img src="images2/btn_more_yellow_pc.svg" alt="arrow"></p>
+        </div>
+    </div>
+    <div class="total middle">        
+        <div class="txt">
+            <p>보다 높은 영양을 위해<br><span>1969년</span>부터 한결같이</p>
+            <p>식품이 사람들의 심신 건강을 지키는 영양분이 될 수 있도록<br>
+                과거부터 현재까지 이어온<br>
+                그리고 앞으로도 계속 이어갈 오뚜기의 마음입니다.</p>
+            <p><img src="images2/btn_more_yellow_pc.svg" alt="arrow"></p>
+        </div>
+        <div class="img">
+            <p></p>
+            <svg>
+                <clipPath id="shape2" clipPathUnits="objectBoundingBox">
+                    <path class="st0" d="M0.09,0.13C0.04,0.15,0,0.21,0,0.27v0.46c0,0.06,0.04,0.12,0.09,0.13l0.31,0.11C0.46,1,0.54,1,0.59,0.98
+	                    l0.31-0.11C0.96,0.85,1,0.79,1,0.74V0.27c0-0.05-0.04-0.12-0.09-0.13L0.6,0.02C0.55,0,0.46,0,0.41,0.02L0.09,0.13z"/>
+                </clipPath>
+            </svg>
+        </div>
+    </div>
+    <div class="total bottom">
+        <div class="img">
+            <p></p>
+            <svg>
+                <clipPath id="shape3" clipPathUnits="objectBoundingBox">
+                    <path d="M0.9,0.9 C0.633,1,0.367,1,0.1,0.9 C-0.033,0.633,-0.033,0.367,0.1,0.1 C0.367,-0.033,0.633,-0.033,0.9,0.1 C1,0.367,1,0.633,0.9,0.9" />
+                </clipPath>
+            </svg>
+        </div>
+        <div class="txt">
+            <p>보다 앞선<span>식품개발</span>에<br>노력하고 있습니다.</p>
+            <p>오뚜기는 항상 앞장서서 창조의 기쁨과 보람을 경험하고<br>
+               앞선 식품을우리 인류에게 선보입니다.</p>
             <p><img src="images2/btn_more_yellow_pc.svg" alt="arrow"></p>
         </div>
     </div>
