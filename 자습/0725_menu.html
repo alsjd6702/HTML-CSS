@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+
+        body{background: #ddd;}
+        .wrap{background: #fff; overflow: hidden;}
+        .wrap header{width: 1800px; height: 81px; margin: 0 52.5px;}
+        .wrap header > div, .wrap header > nav{float: left;}
+        
+        .wrap header .logo{width: 201px; margin: 30px 140px 0 0;}
+        .wrap header .logo a{width: 201px; height: 20px; display: block;}
+        .wrap header .logo a img{width: 100%; height: 100%; object-fit: cover;}
+
+        .wrap header nav{width: 1333px;}
+        .wrap header nav .menu > li{float: left; width: 64px; margin-right: 82px; position: relative;}
+
+        .wrap header nav .menu > li > .change{width: 100%; height: 81px; line-height: 81px; position: relative;}
+        .wrap header nav .menu > li > .change a{display: block; font-weight: bold; position: absolute; left: 0; top: 0;}
+        .wrap header nav .menu > li > .change a:nth-child(1){border-bottom: 2px solid transparent;}
+        .wrap header nav .menu > li > .change a:nth-child(2){color: #2973c9; border-bottom: 2px solid #2973c9; width: 0; white-space: nowrap; overflow: hidden;}
+        .wrap header nav .menu > li:hover > .change a:nth-child(1){font-weight: normal; transition-delay: 0.2s;}
+        .wrap header nav .menu > li:hover > .change a:nth-child(2){animation-name: color; animation-duration: 0.2s; animation-timing-function: linear; animation-fill-mode: forwards;}
+
+        @keyframes color {
+            0%{width: 0;}
+            100%{width: 100%;}
+        }
+
+        .wrap header nav .menu > li:hover .sub{transition: 0.5s; padding-top: 25px; height: 190px;}
+        .wrap header nav .menu > li:not(:hover) .sub{transition: 0.5s;}
+        .wrap header nav .menu .sub{width: 100vw; height: 0; overflow: hidden;}
+        .wrap header nav .menu .sub > li{margin-right: 40px;}
+        .wrap header nav .menu > li:nth-child(1) .sub > li,
+        .wrap header nav .menu > li:nth-child(2) .sub > li,
+        .wrap header nav .menu > li:nth-child(3) .sub > li,
+        .wrap header nav .menu > li:nth-child(4) .sub > li
+        {float: left;}
+        .wrap header nav .menu > li:nth-child(5) .sub > li:nth-child(2),
+        .wrap header nav .menu > li:nth-child(6) .sub > li:nth-child(2)
+        {margin: 10px 0;}
+
+        .wrap header nav .menu .sub > li > a{font-size: 13px; font-weight: bold;}
+        .wrap header nav .menu .sub > li:hover > a{color: #2973c9; text-decoration: underline; text-decoration-color: #2973c9;}
+        
+        .wrap header nav .menu .sub .dsub > li{margin-top: 7px;}
+        .wrap header nav .menu .sub .dsub > li a{font-size: 12px; color: #686868; font-weight: bold;}
+        .wrap header nav .menu .sub .dsub > li a:hover{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <!-- https://www.youngone.co.kr/ -->
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <img src="images/youngone_logo.png" alt="logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <p class="change">
+                            <a href="#">회사소개</a>
+                            <a href="#">회사소개</a>
+                        </p>                       
+                        <ul class="sub">
+                            <li>
+                                <a href="#">경영진 메시지</a>
+                                <ul class="dsub">
+                                    <li><a href="#">Chairman & CEO</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">경영 철학</a>
+                            </li>
+                            <li>
+                                <a href="#">Core Values</a>
+                            </li>
+                            <li>
+                                <a href="#">회사연혁</a>
+                            </li>
+                            <li>
+                                <a href="#">사업장 안내</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="change">
+                            <a href="#">비즈니스</a>
+                            <a href="#">비즈니스</a>
+                        </p>
+                        <ul class="sub">
+                            <li>
+                                <a href="#">제조 OEM</a>
+                                <ul class="dsub">
+                                    <li><a href="#">의류(우븐/니트)</a></li>
+                                    <li><a href="#">신발</a></li>
+                                    <li><a href="#">용품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">원자재</a>
+                                <ul class="dsub">
+                                    <li><a href="#">직물</a></li>
+                                    <li><a href="#">니트</a></li>
+                                    <li><a href="#">충전재</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">R&D</a>
+                            </li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="change">
+                            <a href="#">투자정보</a>
+                            <a href="#">투자정보</a>
+                        </p>
+                        <ul class="sub">
+                            <li>
+                                <a href="#">영원무역홀딩스</a>
+                                <ul class="dsub">
+                                    <li><a href="#">재무정보</a></li>
+                                    <li><a href="#">주가정보</a></li>
+                                    <li><a href="#">공시정보</a></li>
+                                    <li><a href="#">공고사항</a></li>
+                                    <li><a href="#">배당현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">영원무역</a>
+                                <ul class="dsub">
+                                    <li><a href="#">재무정보</a></li>
+                                    <li><a href="#">주가정보</a></li>
+                                    <li><a href="#">공시정보</a></li>
+                                    <li><a href="#">공고사항</a></li>
+                                    <li><a href="#">배당현황</a></li>
+                                </ul>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="change">
+                            <a href="#">인재채용</a>
+                            <a href="#">인재채용</a>
+                        </p>
+                        <ul class="sub">
+                            <li>
+                                <a href="#">인사</a>
+                                <ul class="dsub">
+                                    <li><a href="#">인재상</a></li>
+                                    <li><a href="#">인사제도</a></li>
+                                    <li><a href="#">복리후생</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">인사톡</a>
+                                <ul class="dsub">
+                                    <li><a href="#">선배들의 이야기</a></li>
+                                    <li><a href="#">자주 묻는 질문</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">채용공고</a>
+                            </li> 
+                            <li>
+                                <a href="#">입사지원</a>
+                            </li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="change">
+                            <a href="#">홍보센터</a>
+                            <a href="#">홍보센터</a>
+                        </p>
+                        <ul class="sub">
+                            <li>
+                                <a href="#">영원소식</a>
+                            </li>
+                            <li>
+                                <a href="#">홍보영상</a>
+                            </li>     
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="change">
+                            <a href="#">기타</a>
+                            <a href="#">기타</a>
+                        </p>
+                        <ul class="sub">
+                            <li>
+                                <a href="#">개인정보 취급방침</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>     
+                            <li>
+                                <a href="#">CVC Portfolios</a>
+                            </li>     
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="lan">
+                <p>
+                    <a href="#">KOR</a>
+                    <a href="#">ENG</a>
+                </p>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

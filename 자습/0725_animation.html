@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{width: 36px; height: 36px; margin: 50px; list-style: none; display: flex; flex-wrap: wrap; gap: 12px;}
+        ul li{width: 4px; height: 4px; border-radius: 50%; animation-name: ani; animation-duration: 1.2s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate;}
+
+        ul .l1{background: red; animation-delay: 0.1s;}
+        ul .l2{background: orange; animation-delay: 0.2s;}
+        ul .l3{background: yellow; animation-delay: 0.3s;}
+        ul .l4{background: green; animation-delay: 0.5s;}
+        ul .l5{background: blue; animation-delay: 0.6s;}
+        ul .l6{background: skyblue; animation-delay: 0.7s;}
+        ul .l7{background: purple; animation-delay: 0.9s;}
+        ul .l8{background: pink; animation-delay: 1s;}
+        ul .l9{background: black; animation-delay: 1.1s;}
+
+        @keyframes ani {
+            0%{transform: scale(1);}
+            100%{transform: scale(2);}
+        }
+    </style>
+</head>
+<body>
+    <!-- https://www.gspower.co.kr/ -->
+    <a href="#">
+        <ul>
+            <li class="l1"></li>
+            <li class="l2"></li>
+            <li class="l3"></li>
+            <li class="l4"></li>
+            <li class="l5"></li>
+            <li class="l6"></li>
+            <li class="l7"></li>
+            <li class="l8"></li>
+            <li class="l9"></li>
+        </ul>
+    </a>
+</body>
+</html>
