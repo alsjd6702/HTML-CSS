@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>카카오</title>
+    <style>
+        @font-face {
+            font-family: KakaoBig-Bold;
+            src: url(webfonts/KakaoBig-Bold-v1.0.woff2) format("woff2");
+        }
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        .wrap{width: 1728px; height: 588px; margin: 50px auto; display: flex; flex-wrap: wrap; flex-direction: column;}
+        .wrap div{background: #F3F3F3; margin: 16px 0 0 16px; border-radius: 25px; padding: 62px; display: flex; justify-content: space-between;}
+        .wrap div p{color: #000; font-size: 30px; font-family: KakaoBig-Bold; line-height: 56px;}
+        .wrap div ul li{display: flex; gap: 12px;}
+        .wrap div ul li a{display: block; width: 56px; height: 56px;}
+        .wrap div ul li a:last-child{background-image: url(images/more_gray.svg); background-size: cover;}
+        .wrap div ul li a:last-child:hover{background-image: url(images/more_black.svg);}
+        .wrap div ul li a img{width: 100%; height: 100%; object-fit: cover;}
+
+        @media screen and (max-width: 1903px) {
+            .wrap{width: 1332px;}
+            .wrap div{padding: 52px 42px;}
+        }
+        @media screen and (max-width: 1440px) {
+            .wrap{width: 960px; height: 500px;}
+            .wrap div{padding: 32px 36px;}
+            .wrap div p{font-size: 18px; line-height: 46px;}
+            .wrap div ul li a{display: block; width: 46px; height: 46px;}
+        }
+        @media screen and (max-width: 1024px) {
+            .wrap{width: 720px;}
+            .wrap div{padding: 32px 24px; border-radius: 15px;}
+            .wrap div ul li a:nth-child(3){display: none;}
+        }
+        @media screen and (max-width: 768px) {
+            .wrap{width: 396px;}
+            .wrap div{padding: 5px 20px 20px; display: block;}
+            .wrap div p{font-size: 16px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="com">
+            <p>커뮤니케이션</p>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/talk.png" alt="talk"></a>
+                    <a href="#"><img src="images/daum.png" alt="daum"></a>
+                    <a href="#"><img src="images/story.png" alt="story"></a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="life">
+            <p>일상편의</p>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/map.png" alt="map"></a>
+                    <a href="#"><img src="images/taxi.png" alt="taxi"></a>
+                    <a href="#"><img src="images/bank.png" alt="bank"></a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="ent">
+            <p>엔터테인먼트</p>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/page.png" alt="page"></a>
+                    <a href="#"><img src="images/pick.png" alt="pick"></a>
+                    <a href="#"><img src="images/melon.png" alt="melon"></a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bus">
+            <p>비즈니스</p>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/channel.png" alt="channel"></a>
+                    <a href="#"><img src="images/cloud.png" alt="cloud"></a>
+                    <a href="#"><img src="images/agit.png" alt="agit"></a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>        
+        <div class="sho">
+            <p>쇼핑</p>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/gift.png" alt="gift"></a>
+                    <a href="#"><img src="images/shopping.png" alt="shopping"></a>
+                    <a href="#"><img src="images/zigzag.png" alt="zigzag"></a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>        
+        <div class="soc">
+            <p>소셜임팩트</p>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/with.png" alt="with"></a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
