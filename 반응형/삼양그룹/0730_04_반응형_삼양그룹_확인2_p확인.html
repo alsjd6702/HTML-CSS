@@ -20,7 +20,7 @@
         a{text-decoration: none;}
         ul.cardList{width: 100%; max-width: 1600px; margin: 50px auto; display: flex; flex-wrap: wrap; justify-content: center; transition: 0.5s ease-in;}
         ul.cardList li{flex: 1 0 20%; height: 360px; transition: 0.5s; position: relative; overflow: hidden;}
-        
+
         ul.cardList li:nth-child(1) .bg{background-image: url(images/card_list_bg1_pc.jpg);}
         ul.cardList li:nth-child(2) .bg{background-image: url(images/card_list_bg2_pc.png);}
         ul.cardList li:nth-child(3) .bg{background-image: url(images/card_list_bg3_pc.jpg);}
@@ -28,7 +28,7 @@
         ul.cardList li:hover .bg{transform: scale(1.1);}
         ul.cardList li a{display: block; width: 100%; height: 100%; background-size: cover; transform: scale(1); transition: 0.5s;}
 
-        ul.cardList li a p{position: relative; z-index: 1;}
+        ul.cardList li a p{position: relative; z-index: 1; color: #fff; left: 50px; top: 50px;}
         ul.cardList li .bg{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; transform: scale(1); transition: 0.5s;}
 
         ul.cardList li a:after{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0;}
@@ -37,6 +37,15 @@
         ul.cardList li:nth-child(3) a:after{background-color: rgba(139, 185, 6, 0.76);}
         ul.cardList li:nth-child(4) a:after{background-color: rgba(0, 163, 241, 0.64);}
         ul.cardList li:hover a:after{opacity: 1;}       
+
+        
+        ul.cardList li a p:nth-child(1){font-family: SYFotfBo00; font-size: 36px;}
+        ul.cardList li a p:nth-child(2){font-family: NotoSansKR-Bold; font-size: 19px; margin: 10px 0 20px;}
+        ul.cardList li a p:nth-child(2), ul.cardList li a p:nth-child(3){top: 80px; opacity: 0;}
+        ul.cardList li a p:nth-child(2){transition: 0.5s;}
+        ul.cardList li a p:nth-child(3){transition: 0.5s 0.1s;}
+        ul.cardList li:hover a p:nth-child(2), ul.cardList li:hover a p:nth-child(3){top: 50px; opacity: 1;}
+
 
         @media screen and (max-width: 1530px) {
             ul.cardList{max-width: 1280px;}
