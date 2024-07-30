@@ -10,26 +10,51 @@
         ul{list-style: none;}
         a{text-decoration: none;}
 
-        .wrap{width: 1600px;}
-        .wrap ul{display: flex;}
-        .wrap ul li{width: 400px; height: 360px; position: relative; background-position: 50% 50%; transition: 0.3s; background-size: 100%;}
+        .wrap{width: 1600px; height: 360px; margin: 50px auto;}
+        .wrap ul{display: flex; width: 100%;}
+        .wrap ul li{width: 40%; height: 360px; position: relative; background-repeat: no-repeat; background-position: center; background-size: 100%; transition: 0.3s;}
         .wrap ul li:nth-child(1){background-image: url(images/card_list_bg1_pc.jpg);}
         .wrap ul li:nth-child(2){background-image: url(images/card_list_bg2_pc.png);}
         .wrap ul li:nth-child(3){background-image: url(images/card_list_bg3_pc.jpg);}
         .wrap ul li:nth-child(4){background-image: url(images/card_list_bg4_pc.jpg);}
-        .wrap ul:hover li:hover{background-size: 110%;}
+        .wrap ul li:hover{background-size: 110%;}
+
         .wrap ul li a{display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;}
         .wrap ul li a .txt{width: 100%; height: 100%; padding: 50px; box-sizing: border-box; transition: 0.3s;}
-        .wrap ul li:nth-child(1) a:hover .txt{background: rgba(0, 163, 241, 0.84);}
-        .wrap ul li:nth-child(2) a:hover .txt{background: rgba(219, 92, 41, 0.79);}
-        .wrap ul li:nth-child(3) a:hover .txt{background: rgba(139, 185, 6, 0.76);}
-        .wrap ul li:nth-child(4) a:hover .txt{background: rgba(0, 163, 241, 0.64);}
+        .wrap ul li:nth-child(1):hover a .txt{background: rgba(0, 163, 241, 0.84);}
+        .wrap ul li:nth-child(2):hover a .txt{background: rgba(219, 92, 41, 0.79);}
+        .wrap ul li:nth-child(3):hover a .txt{background: rgba(139, 185, 6, 0.76);}
+        .wrap ul li:nth-child(4):hover a .txt{background: rgba(0, 163, 241, 0.64);}
+
         .wrap ul li a .txt p{font-weight: bold; color: #fff;}
         .wrap ul li a .txt > p{font-size: 36px; margin-bottom: 10px;}
-        .wrap ul li a .txt .op p{font-size: 19px; margin-bottom: 20px; position: relative; top: 30px; opacity: 0;}
-        .wrap ul li a .txt .op p:first-child{transition: 0.3s;}
+        .wrap ul li a .txt .op p{position: relative; top: 30px; opacity: 0;}
+        .wrap ul li a .txt .op p:first-child{font-size: 19px; margin-bottom: 20px; transition: 0.3s;}
         .wrap ul li a .txt .op p:last-child{transition: 0.3s 0.1s;}
         .wrap ul li:hover a .txt .op p{opacity: 1; top: 0;}
+
+        @media screen and (max-width: 1759px) {
+            .wrap{width: 92%;}
+            .wrap ul li{background-size: cover;}            
+            .wrap ul li a .txt{padding: 50px 0 50px 50px;}
+            .wrap ul li a .txt > p{font-size: 32px; letter-spacing: -3px;}
+        }
+        @media screen and (max-width: 1023px) {
+            .wrap ul{flex-wrap: wrap;}
+            .wrap ul li{width: 50%; height: 250px;}
+            .wrap ul li:nth-child(1){background-image: url(images/card_list_bg1_m.jpg);}
+            .wrap ul li:nth-child(2){background-image: url(images/card_list_bg2_m.png);}
+            .wrap ul li:nth-child(3){background-image: url(images/card_list_bg3_m.jpg);}
+            .wrap ul li:nth-child(4){background-image: url(images/card_list_bg4_m.jpg);}
+            .wrap ul li a .txt{padding: 35px 30px;}
+            .wrap ul li a .txt > p{font-size: 30px;}
+            .wrap ul li a .txt .op p{opacity: 1; top: 0;}
+            .wrap ul li a .txt .op p:first-child{display: none;}
+        }
+        @media screen and (max-width: 766px) {
+            .wrap ul{width: 100%;}
+            .wrap ul li{width: 100%; height: 175px;}
+        }
     </style>
 </head>
 <body>
