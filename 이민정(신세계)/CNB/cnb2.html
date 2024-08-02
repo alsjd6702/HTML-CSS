@@ -19,39 +19,49 @@
         ul{list-style: none;}
         a{text-decoration: none;}
 
-        .wrap{width: 100%;}
         .wrap ul{width: 940px; height: 424px; display: flex; justify-content: space-between; margin: 50px auto 20px;}
         .wrap ul li{width: 311px; position: relative;}
         .wrap ul li a{display: block;}
         .wrap ul li a > p{width: 100%; height: 424px;}
-        .wrap ul li a > p img{width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);}
+        .wrap ul li a > p img{width: 100%; height: 100%; object-fit: cover; filter: brightness(0.4);}
+
         .wrap ul li a .txt{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
         .wrap ul li a .txt p{color: #fff; text-align: center;}
         .wrap ul li a .txt p span{display: block;}
         .wrap ul li a .txt p:nth-child(1){font-size: 30px; font-family: NanumBarunGothic;}
         .wrap ul li a .txt p:nth-child(2){font-size: 15px; font-family: NanumBarunGothicLight; margin-top: 20px; line-height: 25px;}
 
-        .wrap ul li:hover a > p img{filter: brightness(0.3);}
+        .wrap ul li:hover a > p img{filter: brightness(0.2);}
         .wrap ul li:hover a .txt p:nth-child(1){color: #f29b76;}
 
         .wrap .bottom{width: 940px; height: 180px; margin: 0 auto; background: #c76f53; position: relative;}
         .wrap .bottom a{display: block;}
-        .wrap .bottom a .bg1{background: url(images/ico_management_sprits.png); width: 79px; height: 44px; position: absolute; left: 240px; top: 50%; transform: translateY(-50%);}
-        .wrap .bottom a p{color: #fff; text-align: center;}
-        .wrap .bottom a p:nth-of-type(1){font-size: 30px; font-family: NanumBarunGothic; padding-top: 46px;}
-        .wrap .bottom a p:nth-of-type(2){font-size: 16px; font-family: NanumBarunGothicLight; padding-top: 16px; line-height: 25px;}
-        .wrap .bottom a p span{display: block;}
-        .wrap .bottom a .bg2{background: url(images/ico_management_sprits.png); width: 79px; height: 44px; position: absolute; right: 230px; top: 50%; transform: translateY(-50%); background-position: -158px 0; background-repeat: no-repeat;}
+        .wrap .bottom a .bg1{background-image: url(images/ico_management_sprits.png); width: 79px; height: 44px; position: absolute; left: 240px; top: 50%; transform: translateY(-50%); background-repeat: no-repeat;}
+        .wrap .bottom a .btxt p{color: #fff; text-align: center;}
+        .wrap .bottom a .btxt p:nth-child(1){font-size: 30px; font-family: NanumBarunGothic; padding-top: 46px;}
+        .wrap .bottom a .btxt p:nth-child(2){font-size: 16px; font-family: NanumBarunGothicLight; padding-top: 16px; line-height: 25px;}
+        .wrap .bottom a .btxt p span{display: block;}
+        .wrap .bottom a .bg2{background-image: url(images/ico_management_sprits.png); width: 32px; height: 32px; position: absolute; right: 275px; top: 50%; transform: translateY(-50%); background-position: -158px 0; background-repeat: no-repeat;}
 
         @media screen and (max-width: 960px) {
-            .wrap{width: 100%;}
-            .wrap ul{width: 100%; height: 369px; flex-direction: column;}
+            .wrap{padding: 0 10px; box-sizing: border-box;}
+            .wrap ul{width: 100%; height: 369px; flex-direction: column; margin-bottom: 15px;}
             .wrap ul li{width: 100%;}
-            .wrap ul li a > p{width: 100%; height: 120px;}
+            .wrap ul li a > p{height: 120px;}            
             .wrap ul li a .txt p span{display: inline;}
             .wrap ul li a .txt p:nth-child(1){font-size: 16px;}
-            .wrap ul li a .txt p:nth-child(2){font-size: 12px;}
+            .wrap ul li a .txt p:nth-child(2){font-size: 12px; margin-top: 15px;}
+            .wrap .bottom {width: 100%; height: 95px;}
+            .wrap .bottom a .bg1{width: 47px; height: 30px; left: 30px; background-size: 130px 38px;}
+            .wrap .bottom a .btxt p:nth-child(1){font-size: 16px; padding-top: 20px;}
+            .wrap .bottom a .btxt p:nth-child(2){font-size: 12px; padding-top: 10px;}
+            .wrap .bottom a .btxt p span{display: inline;}
+            .wrap .bottom a .bg2{width: 22px; height: 22px; right: 30px; background-position: -108px 0; background-size: 130px 38px;}
+        }
 
+        @media screen and (max-width: 640px) {
+            .wrap ul li a > p{overflow: hidden;}
+            .wrap ul li a > p img{transform: scale(1.2); width: 603px;}
         }
     </style>
 </head>
@@ -89,8 +99,10 @@
         <div class="bottom">
             <a href="#">
                 <div class="bg1"></div>
-                <p>공시 및 공고</p>
-                <p>결산 공고 및 주주총회 결과를<span> 안내해 드립니다.</span></p>
+                <div class="btxt">
+                    <p>공시 및 공고</p>
+                    <p>결산 공고 및 주주총회 결과를<span> 안내해 드립니다.</span></p>
+                </div>
                 <div class="bg2"></div>
             </a>
         </div>
