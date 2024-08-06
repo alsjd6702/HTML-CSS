@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do it!</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        .wrap .We-Are{width: 90%; max-width: 1132px; margin: 100px auto 200px; position: relative;}
+        .wrap .We-Are::after{content: ""; width: 100%; height: 2px; background: #EEEEEE; position: absolute; left: 0; bottom: -100px;}
+        .wrap .We-Are .We-Are-Title{width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
+        .wrap .We-Are .We-Are-Title h2{flex-basis: 15%; font-size: 42px; color: #3F51B5; font-weight: lighter;}
+        .wrap .We-Are .We-Are-Title p{width: 520px; font-size: 14px; color: #616161; position: relative; padding: 0 0 0 20px; letter-spacing: -0.3px; line-height: 25px;}
+        .wrap .We-Are .We-Are-Title p::before{content: ""; width: 2px; height: 44px; background: #E0E0E0; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+        .wrap .We-Are .We-Are-Con{width: 100%; display: flex; margin: 120px 0 0; justify-content: space-between;}
+        .wrap .We-Are .We-Are-Con li{flex: 1 1 20%;}
+        .wrap .We-Are .We-Are-Con li .con{width: 95%; margin: 0 auto;}
+        .wrap .We-Are .We-Are-Con li .con a{display: block; text-align: center;}
+        .wrap .We-Are .We-Are-Con li .con a:nth-child(1){height: 52px;}
+        .wrap .We-Are .We-Are-Con li .con a:nth-child(1) img{height: 100%; object-fit: cover;}
+        .wrap .We-Are .We-Are-Con li .con a:nth-child(2) p:nth-child(1){font-size: 14px; color: #3F51B5; margin: 29px 0 20px;}
+        .wrap .We-Are .We-Are-Con li .con a:nth-child(2) p:nth-child(2){font-size: 14px; color: #616161; letter-spacing: -0.3px;}
+        @media screen and (max-width: 1131px){
+            .wrap .We-Are .We-Are-Title{flex-direction: column; text-align: center;}
+            .wrap .We-Are .We-Are-Title p{text-align: center; margin: 30px auto 0; padding: 0;}
+            .wrap .We-Are .We-Are-Title p::before{display: none;}
+            .wrap .We-Are .We-Are-Con li .con{width: 90%;}
+        }
+        @media screen and (max-width: 767px){
+            .wrap .We-Are{width: 95%;}
+            .wrap .We-Are .We-Are-Title p{width: 95%;}
+            .wrap .We-Are .We-Are-Con{margin: 70px 0 0; flex-direction: column;}
+            .wrap .We-Are .We-Are-Con li{margin: 0 0 50px;}
+        }
+
+        .wrap .Work{width: 100%;}
+        .wrap .Work h2{font-size: 42px; color: #3F51B5; font-weight: lighter; width: 90%; max-width: 1132px; margin: 0 auto 80px;}
+        .wrap .Work .Work-Con{width: 100%; display: flex; flex-wrap: wrap;}
+        .wrap .Work .Work-Con li{flex: 1 1 25%; position: relative;}
+        .wrap .Work .Work-Con li a{display: block; width: 100%;}
+        .wrap .Work .Work-Con li a > p{width: 100%; height: 100%; font-size: 0;}
+        .wrap .Work .Work-Con li a > p img{width: 100%;}
+        .wrap .Work .Work-Con li a .txt{position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 30px 0 0 40px; background: #3f51b5; transition: 0.3s; opacity: 0;}
+        .wrap .Work .Work-Con li a .txt p{color: #fff; position: relative; top: -30px; transition: 0.3s;}
+        .wrap .Work .Work-Con li a .txt p:nth-child(1){font-size: 23px; margin-bottom: 7px;}
+        .wrap .Work .Work-Con li a .txt p:nth-child(2){font-size: 11px;}
+        .wrap .Work .Work-Con li:hover a .txt{opacity: 0.86;}
+        .wrap .Work .Work-Con li:hover a .txt p{top: 0;}
+        @media screen and (max-width: 1131px) {
+            .wrap .Work h2{width: 100%; text-align: center;}
+            .wrap .Work .Work-Con li{flex: 1 1 50%;}
+        }
+        @media screen and (max-width: 767px) {
+            .wrap .We-Are{margin: 100px auto;}
+            .wrap .We-Are::after{width: 95%; bottom: -50px; left: 50%; transform: translateX(-50%);}
+            .wrap .Work h2{margin: 0 auto 55px;}
+            .wrap .Work .Work-Con li{flex: 1 1 100%;}
+            .wrap .Work .Work-Con li a .txt{padding: 20px 0 0 25px;}
+            .wrap .Work .Work-Con li a .txt p{top: -20px;}
+            .wrap .Work .Work-Con li:hover a .txt p{top: 0;}
+        }        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="We-Are">
+            <div class="We-Are-Title">
+                <h2>WE ARE</h2>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+            <ul class="We-Are-Con">
+                <li>
+                    <div class="con">
+                        <a href="#">
+                            <img src="p_images/promo01.png" alt="promo01">
+                        </a>
+                        <a href="#">
+                            <p>HOME</p>
+                            <p>
+                                Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.
+                            </p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <a href="#">
+                            <img src="p_images/promo02.png" alt="promo02">
+                        </a>
+                        <a href="#">
+                            <p>WE ARE</p>
+                            <p>
+                                Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.
+                            </p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <a href="#">
+                            <img src="p_images/promo03.png" alt="promo03">
+                        </a>
+                        <a href="#">
+                            <p>WORK</p>
+                            <p>
+                                Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.
+                            </p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <a href="#">
+                            <img src="p_images/promo04.png" alt="promo04">
+                        </a>
+                        <a href="#">
+                            <p>BLOG</p>
+                            <p>
+                                Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.
+                            </p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="Work">
+            <h2>WORK</h2>
+            <ul class="Work-Con">
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work01.jpg" alt="work01">
+                        </p>
+                        <div class="txt">
+                            <p>Running</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work02.jpg" alt="work02">
+                        </p>
+                        <div class="txt">
+                            <p>Rugby</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work03.jpg" alt="work03">
+                        </p>
+                        <div class="txt">
+                            <p>Weight</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work04.jpg" alt="work04">
+                        </p>
+                        <div class="txt">
+                            <p>Marathon</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work05.jpg" alt="work05">
+                        </p>
+                        <div class="txt">
+                            <p>Boxing</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work06.jpg" alt="work06">
+                        </p>
+                        <div class="txt">
+                            <p>Ice Hockey</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work07.jpg" alt="work07">
+                        </p>
+                        <div class="txt">
+                            <p>Skate Board</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="p_images/work08.jpg" alt="work08">
+                        </p>
+                        <div class="txt">
+                            <p>Basketball</p>
+                            <p>WEB/PRINT</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
