@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한화오션</title>
+    <style>
+        @font-face {
+            font-family: HanwhaGothicB;
+            src: url(webfonts/HanwhaGothicB.woff) format("woff");
+        }
+        @font-face {
+            font-family: HanwhaGothicL;
+            src: url(webfonts/HanwhaGothicL.woff) format("woff");
+        }
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+
+        .wrap{width: 100%; height: 100vh;}
+        .wrap ul{width: 100%; height: 100%; display: flex; flex-wrap: wrap;}
+        .wrap ul li{flex: 1 1 20%; background-size: cover; position: relative; transition: 0.7s ease-out;}
+        .wrap ul li:nth-child(1){background-image: url(https://www.hanwhaocean.com/images/main/business_img_01.jpg); background-position: 50.4% center;}
+        .wrap ul li:nth-child(2){background-image: url(https://www.hanwhaocean.com/images/main/business_img_02.jpg); background-position: 65.4% center;}
+        .wrap ul li:nth-child(3){background-image: url(https://www.hanwhaocean.com/images/main/business_img_05.jpg); background-position: 19.6% center;}
+        .wrap ul li:nth-child(4){background-image: url(https://www.hanwhaocean.com/images/main/business_img_03.webp); background-position: 88% center;}
+        .wrap ul li:nth-child(5){background-image: url(https://www.hanwhaocean.com/images/main/business_img_04.webp); background-position: 85.4% center;}
+        .wrap ul li:hover{flex: 1 1 60%;}
+        .wrap ul li:not(:hover){flex: 1 1 10%;}
+
+        .wrap ul li dl{position: absolute; left: 0; bottom: 0; color: #fff; white-space: nowrap; width: 100%;}
+        .wrap ul li dl dt{font-size: 40px; font-family: HanwhaGothicB; padding: 0 0 100px 40px; line-height: 60px;}
+        .wrap ul li dl dd{font-size: 20px; font-family: HanwhaGothicL; line-height: 30px; display: none;}
+        .wrap ul li:hover dt{font-size: 60px; line-height: 100px; padding: 0 0 220px 30px;}
+        .wrap ul li:hover dd{display: block;}
+
+    </style>
+</head>
+<body>
+    <!-- https://www.hanwhaocean.com/ -->
+    <div class="wrap">
+        <ul>
+            <li>
+                <dl>
+                    <dt>
+                        초격차 
+                        <br class="pc">
+                        방산 기술
+                    </dt>
+                    <dd>
+                        해양무인시스템은 군집제어, 자율항해, 장애물 회피 기능 등 
+                        <br class="pc">
+                        첨단 4차 산업혁명 기술을 적용해 연안/수중감시 및 탐색, 해양 환경 조사 등 
+                        <br class="pc">
+                        군/민수용 복합임무 수행이 가능합니다.
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        친환경·디지털 
+                        <br class="pc">
+                        선박 개발
+                    </dt>
+                    <dd>
+                        조선해양 산업은 기후변화와 온실가스 배출 등 환경문제로 변화의 파도에 직면하고 있습니다. 
+                        <br class="pc">
+                        한화오션은 바다를 살리고 지구와 인류에게 이로운 친환경 기술력을 응집하여 
+                        <br class="pc">
+                        각종 규제에 능동적으로 대응하고 있습니다.
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        글로벌 FPSO 
+                        <br class="pc">
+                        시장 선도
+                    </dt>
+                    <dd>
+                        한화오션은 고객의 가치를 극대화하는 FPSO 솔루션을 제공하고 
+                        <br class="pc">
+                        최신 기술과 혁신적인 설계를 통해 안전성, 신뢰성 및 지속 가능한 운영을 향상시키며 
+                        <br class="pc">
+                        글로벌 시장에서의 경쟁력 강화에 주력하고 있습니다.
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        해상풍력 
+                        <br class="pc">
+                        토탈서비스 제공
+                    </dt>
+                    <dd>
+                        급속도로 성장하고 있는 세계 신재생 에너지 시장의 흐름과 발맞춰 
+                        <br class="pc">
+                        해상풍력 발전 설비에 자사 독자 개발 스마트십 시스템을 적용해 
+                        <br class="pc">
+                        관련업계의 선두주자로 위상을 다져나가고 있습니다. 
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        지속가능한 
+                        <br class="pc">
+                        스마트 야드 구축
+                    </dt>
+                    <dd>
+                        한화오션은 거제사업장을 디지털 생산센터로 변모시켜, 빅데이터와 로봇 기술을 활용한 
+                        <br class="pc">
+                        스마트 야드를 구축하고 있습니다. 이를 통해 생산성을 높이고 지능형 선박 
+                        <br class="pc">
+                        안전 관리 시스템을 도입하여 새로운 기술 패러다임을 제시하고자 합니다.
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
