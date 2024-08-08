@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객의 소리 - SHINSEGAE FOOD</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        
+        .complain{width: 100%; background: #eee;}
+        .complain h2{width: 90%; text-align: center; margin: 0 auto; padding: 50px 0 30px;}
+        .complain .procedure{width: 90%; max-width: 940px; display: flex; justify-content: space-between; margin: 0 auto;}
+
+        .complain .procedure > li{background: #D2492C; padding: 130px 13px 18px; border-radius: 20px; color: #fff; flex: 0 1 15%; text-align: center; position: relative;}
+        .complain .procedure > li::after{content: ""; background-repeat: no-repeat; background-size: cover; position: absolute; width: 62%; height: 30%; left: 50%; top: 30px; transform: translateX(-50%);}
+        .complain .procedure > li:nth-child(1)::after{background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png);}
+        .complain .procedure > li:nth-child(2)::after{background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png); background-position: 25%;}
+        .complain .procedure > li:nth-child(3)::after{background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png); background-position: 50%;}
+        .complain .procedure > li:nth-child(4)::after{background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png); background-position: 75%;}
+        .complain .procedure > li:nth-child(5)::after{background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png); background-position: 100%;}
+        .complain .procedure > li:nth-child(5) ul li a{color: #fff;}
+        .complain .procedure > li:nth-child(5) ul li a span:first-child{ text-decoration: underline;}
+        .complain .procedure > li:nth-child(5) ul li a span:last-child{font-weight: bold; font-size: 18px;}
+        
+        .complain .procedure > li h3{color: #ECFF96; font-size: 23px; margin: 20px 0 5px;}
+        .complain .procedure > li h3 span{color: #D2492C; background: #ECFF96; border-radius: 50%; width: 20px; height: 20px; display: inline-block; line-height: 20px; font-weight: normal; margin-right: 10px;}
+        .complain .procedure > li h3 a{color: #ECFF96;}
+        .complain .procedure > li ul li{line-height: 28px; letter-spacing: -2px;}
+        .complain .procedure > li ul li::before{content: "·"; margin-right: 5px;}
+
+        
+    </style>
+</head>
+<body>
+    <div class="complain">
+        <h2>고객불만 처리절차</h2>
+        <ul class="procedure">
+            <li>
+                <h3><span>1</span><a href="#">접수↗</a></h3>
+                <ul>
+                    <li>홈페이지</li>
+                    <li>유선</li>
+                    <li>우편</li>
+                </ul>
+            </li>
+            <li>
+                <h3><span>2</span>현장방문</h3>
+                <ul>
+                    <li>매장 관리자</li>
+                    <li>CS 담당자</li>
+                </ul>
+            </li>
+            <li>
+                <h3><span>3</span>원인분석</h3>
+                <ul>
+                    <li>매장 및 제조사</li>
+                    <li>품질혁신팀</li>
+                    <li>연구분석팀</li>
+                    <li>식품안전센터</li>
+                </ul>
+            </li>
+            <li>
+                <h3><span>4</span>대책수립</h3>
+                <ul>
+                    <li>원인분석<br>및 대책수립</li>
+                    <li>재발방지 교육<br>및 개선</li>
+                </ul>
+            </li>
+            <li>
+                <h3><span>5</span>고객보고</h3>
+                <ul>
+                    <li>결과보고</li>
+                    <li><a href="#"><span>소비자분쟁해결기준에 의한 보상</span><span>↗</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
