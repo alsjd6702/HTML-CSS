@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레이라이프</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        section{width: 100%; display: flex;}
+        section .bg{width: 40.7%; height: 100vh; position: relative; position: fixed;}
+        section .bg p{width: 100%; height: 100%;}
+        section .bg p img{width: 100%; height: 100%; object-fit: cover; filter: brightness(60%);}
+        section .bg .txt{position: absolute; left: 50px; bottom: 90px; color: #fff; padding-right: 50px; box-sizing: border-box;}
+        section .bg .txt p:first-child{font-size: 24px; font-weight: bold; letter-spacing: -1px; padding-bottom: 20px;}
+        section .bg .txt h1 a{color: #fff; font-size: 56px; letter-spacing: -4px; word-break: keep-all; line-height: 63px;}
+        section .bg .txt h1 a:hover{text-decoration: underline;}
+        section .bg .txt p:nth-child(3){font-size: 20px; letter-spacing: -1px; padding: 20px 0 25px;}
+        section .bg .txt p:last-child{font-size: 20px; font-weight: bold; letter-spacing: -1px;}
+        section .bg .txt p:last-child span{font-weight: normal; letter-spacing: -2px;}
+
+        section .con{width: 59.3%; position: absolute; right: 0; top: 0;}
+        section .con .conlayout{width: 89.5%; margin: 80px auto 0; display: flex; gap: 6.3%;}
+        section .con ul{flex: 1 1 40%;}
+        section .con ul.right{margin-top: 90px;}
+        section .con ul li{width: 100%;}
+        section .con ul li a{display: block; width: 100%; font-size: 0; overflow: hidden;}
+        section .con ul li a img{width: 125%; object-fit: cover; object-position: -60px; transition: 0.5s;}
+        section .con ul li a:hover img{transform: scale(1.1);}
+        section .con ul li .txt{margin-bottom: 110px;}
+        section .con ul li .txt p:first-child{font-size: 16px; font-weight: bold; padding: 17px 0 10px;}
+        section .con ul li .txt h2 a{font-size: 28px; color: #000; letter-spacing: -2px; word-break: keep-all;}
+        section .con ul li .txt h2 a:hover{text-decoration: underline;}
+        section .con ul li .txt p:nth-child(3){font-size: 16px; padding: 10px 0 15px; letter-spacing: -1px;}
+        section .con ul li .txt p:last-child{font-size: 16px; font-weight: bold; letter-spacing: -1px;}
+        section .con ul li .txt p:last-child span{font-weight: normal;}
+
+        @media screen and (max-width: 1199px) {
+            section{display: block;}
+            section .bg{width: 100%; position: relative;}
+            section .bg .txt{left: 25px;}
+
+            section .con{width: 100%; position: relative;}
+            section .con .conlayout{width: 96%; margin: 50px auto 0; display: block;}            
+            section .con ul{display: flex; gap: 2%;}
+            section .con ul.right{margin-top: 20px;}
+            section .con ul li{flex: 0 1 50%; display: flex;}
+            section .con ul li a{flex: 0 1 42%;}
+            section .con ul li .txt{margin-bottom: 0; padding-left: 10px; flex: 0 1 55%;}
+            section .con ul li .txt p:first-child{padding: 0 0 10px;}
+
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="bg">
+            <p>
+                <img src="images/main.jpg" alt="main">
+            </p>
+            <div class="txt">
+                <p>PEOPLE</p>
+                <h1>
+                    <a href="#">기록은 미래의 나에게 보내는 다정한 안부</a>
+                </h1>
+                <p>"기록이 진해질수록 허무함은 희미해져요"</p>
+                <p>김신지｜<span>에세이 작가</span></p>
+            </div>
+        </div>
+        <div class="con">
+            <div class="conlayout">
+                <ul class="left">
+                    <li>
+                        <a href="#">
+                            <img src="images/m01.jpg" alt="m01">
+                        </a>
+                        <div class="txt">
+                            <p>PEOPLE</p>
+                            <h2>
+                                <a href="#">이어지는 삶 속에서 새로 발견한 것</a>
+                            </h2>
+                            <p>"나만의 목표를 갖고 작은 시도를 계속 해보는 게 중요해요"</p>
+                            <p>박찬종｜<span>크리에이터, 패러사이클링 선수</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m03.jpg" alt="m03">
+                        </a>
+                        <div class="txt">
+                            <p>PEOPLE</p>
+                            <h2>
+                                <a href="#">잘하고 싶은 마음보다 일단 '시작'하는 마음으로</a>
+                            </h2>
+                            <p>"작은 목표를 향해 한 걸음, 한 걸음 내딛다 보면 '끝'도 있더라고요"</p>
+                            <p>서귤｜<span>작가</span></p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>
+                        <a href="#">
+                            <img src="images/m02.jpg" alt="m02">
+                        </a>
+                        <div class="txt">
+                            <p>PEOPLE</p>
+                            <h2>
+                                <a href="#">행복은 아주 작은 것에서부터</a>
+                            </h2>
+                            <p>"살아가는 모든 순간, 아이와 같은 마음이 필요해요"</p>
+                            <p>누아｜<span>일러스트레이터</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/m04.jpg" alt="m04">
+                        </a>
+                        <div class="txt">
+                            <p>PEOPLE</p>
+                            <h2>
+                                <a href="#">기사를 쓰는데 이렇게까지</a>
+                            </h2>
+                            <p>"휠체어를 타고 바퀴를 굴리자마자 '내가 알던 세상이 아니구나.' 느꼈어요"</p>
+                            <p>남형도｜<span>기자</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
