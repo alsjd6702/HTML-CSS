@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLIVE YOUNG ｜ CJ올리브영</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        html{scroll-behavior: smooth;}
+
+        .wrap{display: flex; padding-top: 20px;}
+        .wrap .left{width: 50%;}
+        .wrap .left .Ttxt{width: 500px; margin: 0 auto; padding-top: 100px; position: sticky; top: 0;}
+        .wrap .left .Ttxt h1{font-size: 54px; line-height: 60px; margin-bottom: 60px;}
+        .wrap .left .Ttxt .Tindex p a{font-size: 18px; color: #565E65; font-weight: bold; line-height: 40px;}
+        .wrap .left .Ttxt .Tindex p a:hover{color: #82DC28;}
+
+        .wrap .right{width: 50%;}
+        .wrap .right ul li{position: relative; padding-top: 100px; margin-bottom: 30px;}
+        .wrap .right ul li::before{position: absolute; left: -120px; top: 100px; font-size: 18px; font-weight: bold;}
+        .wrap .right ul li:first-child::before{content: "01";}
+        .wrap .right ul li:nth-child(2)::before{content: "02";}
+        .wrap .right ul li:nth-child(3)::before{content: "03";}
+        .wrap .right ul li:last-child::before{content: "04";}
+        .wrap .right ul li > p:first-child{display: none;}
+        .wrap .right ul li > p:nth-child(2){height: 400px;}
+        .wrap .right ul li > p:nth-child(2) img{height: 100%; object-fit: contain;}
+        .wrap .right ul li .Ctxt{margin-top: 50px;}
+        .wrap .right ul li .Ctxt h2{font-size: 30px; line-height: 45px;}
+        .wrap .right ul li .Ctxt p{font-weight: bold; color: #565E65; padding: 40px 0; font-size: 17px;}
+        .wrap .right ul li .Ctxt .op{display: none;}
+        .wrap .right ul li .Ctxt a{color: #000; font-size: 15px; font-weight: bold; text-decoration: underline; position: relative; text-underline-offset: 6px; padding-right: 20px;}
+        .wrap .right ul li .Ctxt a::after{content: ""; width: 10px; height: 10px; background-image: url(https://corp.oliveyoung.com/img/pc-svg-418cd3751e7d1a9a4c3a8099b78970fd.svg); background-size: 380px 352px; background-position: -272px -324px; background-repeat: no-repeat; position: absolute; top: 50%; transform: translateY(-50%); transition: 0.5s; margin-left: 7px;}
+        .wrap .right ul li .Ctxt a:hover::after{background-position:;}
+        footer{padding: 500px;}
+        
+        @media screen and (max-width: 1439px) {
+            .wrap{padding: 20px 60px 0;}
+            .wrap .left .Ttxt{width: 500px; margin: 0;}
+            .wrap .right ul li > p:nth-child(2){width: 100%; height: auto;}
+            .wrap .right ul li > p:nth-child(2) img{width: 100%; object-fit: contain;}
+            .wrap .right ul li .Ctxt{margin-top: 30px;}
+        }
+        @media screen and (max-width: 1169px) {
+            .wrap{display: block; padding: 20px 30px 0;}
+            .wrap .left .Ttxt{padding-top: 50px;}
+            .wrap .left .Ttxt h1{font-size: 26px; line-height: 35px;}
+            .wrap .left .Ttxt .Tindex{display: none;}
+            .wrap .right{margin-left: 13px; width: 100%;}
+            .wrap .right ul li{padding-top: 0; margin-bottom: 100px;}            
+            .wrap .right ul li > p:first-child{display: block; font-size: 12px; color: #565E65; position: relative; top: -15px; font-weight: bold;}
+            .wrap .right ul li::before{left: -25px; top: -15px; font-size: 12px; color: #82DC28;}
+            .wrap .right ul li .Ctxt{margin-top: 30px;}
+            .wrap .right ul li .Ctxt h2{font-size: 18px; line-height: 25px;}
+            .wrap .right ul li .Ctxt p{padding: 20px 0; font-size: 13px;}
+            .wrap .right ul li .Ctxt .op{display: block;}
+            .wrap .right ul li .Ctxt a{font-size: 13px;}
+            .wrap .right ul li .Ctxt a::after{top: 60%; margin-left: 5px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="Ttxt">
+                <h1>OLIVE YOUNG<br>Platforms</h1>
+                <div class="Tindex">
+                    <p><a href="#con1">올리브영 매장</a></p>
+                    <p><a href="#con2">올리브영 Online (국내)</a></p>
+                    <p><a href="#con3">올리브영 글로벌</a></p>
+                    <p><a href="#con4">디플롯</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li id="con1">
+                    <p>올리브영 매장</p>
+                    <p>
+                        <img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=0FA2206E6FA7E9FFB8B98BFFE5CA681C" alt="01">
+                    </p>
+                    <div class="Ctxt">
+                        <h2>고객과 가장 가까운 곳에서<br>건강한 아름다움을 제안합니다.</h2>
+                        <p>
+                            우리는 1,300여개의 매장을 기반으로 고객에게
+                            <br class="op">
+                            뷰티&헬스 상품을 큐레이션합니다.
+                            <br>
+                            또한 체험형 콘텐츠와 커머스의 연계를 통해
+                            <br class="op">
+                            파트너사들에게
+                            <br>
+                            매력적인 브랜딩, 마케팅 채널로
+                            <br class="op">
+                            진화하고 있습니다.
+                        </p>
+                        <a href="#">올리브영 매장이 보고 싶다면?</a>
+                    </div>
+                </li>
+                <li id="con2">
+                    <p>올리브영 Online (국내)</p>
+                    <p>
+                        <img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg;jsessionid=0FA2206E6FA7E9FFB8B98BFFE5CA681C" alt="02">
+                    </p>
+                    <div class="Ctxt">
+                        <h2>고객이 건강한 아름당무을 찾아가는<br>온라인 PLAYGROUND를 제공합니다.</h2>
+                        <p>
+                            우리는 차별화된 온라인 콘텐츠와 AI기술 기반
+                            <br class="op">
+                            상품 추천을 통해 월 이용자 수 480만명,
+                            <br>
+                            멤버십 회원 수 1,400만명 이상의 뷰티&헬스 커뮤니티를 
+                            <br class="op">
+                            구현했습니다.
+                            <br>
+                            또한 업계 최초 당일 배송 서비스인 오늘드림을 
+                            <br class="op">
+                            실행하여 고객경험을 혁신했습니다.
+                        </p>
+                        <a href="#">올리브영 Online 서비스가 궁금하다면?</a>
+                    </div>
+                </li>
+                <li id="con3">
+                    <p>올리브영 글로벌</p>
+                    <p>
+                        <img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg;jsessionid=0FA2206E6FA7E9FFB8B98BFFE5CA681C" alt="03">
+                    </p>
+                    <div class="Ctxt">
+                        <h2>전세계에 한국의<br>뷰티&헬스를 알립니다.</h2>
+                        <p>
+                            우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 
+                            <br class="op">
+                            나가는 교두보 역할을 수행합니다.
+                            <br>
+                            2019년 런칭한 글로벌몰과 연간 약 300만명 이상이 
+                            <br class="op">
+                            외국인 고객이 방문하는 국내 글로벌 특화매장은
+                            <br>
+                            파트너사와 함께 글로벌 시장에서 동반 성장을
+                            <br class="op">
+                            할 수 있는 핵심 원동력입니다.
+                        </p>
+                        <a href="#">올리브영의 글로벌 플랫폼을 보고싶다면?</a>
+                    </div>
+                </li>
+                <li id="con4">
+                    <p>디플롯</p>
+                    <p>
+                        <img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform4-7c45898de0bdfb1de922247a126d8886.jpg;jsessionid=0FA2206E6FA7E9FFB8B98BFFE5CA681C" alt="04">
+                    </p>
+                    <div class="Ctxt">
+                        <h2>가치지향 라이프스타일 플랫폼을 통해<br>고객에게 다양한 즐거움을 선물합니다.</h2>
+                        <p>
+                            고객이 뷰티&헬스를 넘어 라이프스타일 전반에서
+                            <br class="op">
+                            자신만의 가치와
+                            <br>
+                            취향을 반영한 브랜드를
+                            <br class="op">
+                            탐색할 수 있습니다.
+                            <br>
+                            이러한 고객 경험의 확장을 통해 우리는 뷰티&헬스를
+                            <br class="op">
+                            넘어선
+                            <br>
+                            종합 라이프스타일 플랫폼으로 도약합니다.
+                        </p>
+                        <a href="#">D.PLOT의 감각적인 제품들이 궁금하다면?</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
