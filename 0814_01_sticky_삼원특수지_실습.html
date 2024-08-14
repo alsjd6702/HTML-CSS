@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인｜삼원특수지</title>
+    <style>
+        @font-face {
+            font-family: Pretendard-Regular;
+            src: url(webfonts/Pretendard-Regular.woff) format("woff");
+        }
+        @font-face {
+            font-family: Pretendard-SemiBold;
+            src: url(webfonts/Pretendard-SemiBold.woff) format("woff");
+        }
+        p, h1, h3, a, dt, dd{font-family: Pretendard-Regular;}
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        header{height: 88px; width: 100%; background: #ccc; position: fixed; z-index: 10;}
+
+        section{display: flex; padding: 110px 100px 0; box-sizing: border-box; justify-content: space-between;}
+        section .left{width: 40%; position: sticky; top: 110px; height: 100%;}
+        section .left .ltxt p{font-size: 22px; color: rgba(0, 0, 0, 0.5);}
+        section .left .ltxt h1{font-size: 96px; margin: 20px 0 50px;}
+        section .left .ltxt a{font-size: 20px; border: 2px solid; border-radius: 50px; position: relative; color: #000; padding: 15px 60px 15px 30px; font-family: Pretendard-SemiBold;}
+        section .left .ltxt a::after{content: ""; width: 24px; height: 24px; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); background-image: url(https://www.samwonpaper.com/resources/_asset/pc/common/images/icon/icon-more-long-arrow-black.png);}
+        section .left .lmain{padding-top: 150px; position: relative;}
+        section .left .lmain dl{color: #3F3F46; font-weight: bold; position: absolute; left: 55px; top: 210px;}
+        section .left .lmain dl dt{font-size: 40px; line-height: 60px;}
+        section .left .lmain dl dd{font-size: 16px; margin-top: 20px;}
+
+        section .right{width: 50%; display: flex; justify-content: space-between;}
+        section .right ul{flex: 0 1 47%;}
+        section .right ul.rleft{margin-top: 350px;}
+        section .right ul li{margin-bottom: 50px;}
+        section .right ul li a{display: block; position: relative;}
+        section .right ul li a > p{width: 100%; font-size: 0;}
+        section .right ul li a > p img{width: 100%; height: 100%; object-fit: cover;}
+        section .right ul li a .rtxt{width: 100%; height: 120px; background: #000; padding: 24px 24px 44px; box-sizing: border-box; position: absolute; left: 0; bottom: 0;}
+        section .right ul li a .rtxt p{font-size: 16px; color: rgba(255, 255, 255, 0.4); margin-bottom: 5px;}
+        section .right ul li a .rtxt h3{font-size: 24px; color: #fff;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hleft"></div>
+        <nav></nav>
+        <div class="hright"></div>
+    </header>
+    <section>
+        <div class="left">
+            <div class="ltxt">
+                <p>Samwon Gray Paper : 다채로운 매력의 그레이 페이퍼</p>
+                <h1>Monthly Paper</h1>
+                <a href="#">제품보기</a>
+            </div>
+            <div class="lmain">
+                <p>
+                    <img src="https://www.samwonpaper.com/storage/cms/PRODUCTMONTH/202407/d524e42f-a2bd-4a8b-a1ec-3ec4b6da1058.jpg" alt="main">
+                </p>
+                <dl>
+                    <dt>다채로운 매력의 소유자,<br>그레이 페이퍼를 소개합니다.</dt>
+                    <dd>July 2024</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="right">
+            <ul class="rleft">
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/SIR-99_MA.png" alt="01">
+                        </p>
+                        <div class="rtxt">
+                            <p>시리오러프</p>
+                            <h3>시리오러프</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/MTRC-99_MA.png" alt="02">
+                        </p>
+                        <div class="rtxt">
+                            <p>마테리카</p>
+                            <h3>마테리카</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/SKIN-99_MA.png" alt="03">
+                        </p>
+                        <div class="rtxt">
+                            <p>큐리어스 스킨</p>
+                            <h3>큐리어스 스킨</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="rright">
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/MOON-99_MA.png" alt="04">
+                        </p>
+                        <div class="rtxt">
+                            <p>문보드</p>
+                            <h3>문보드</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/RMK-99_MA.png" alt="05">
+                        </p>
+                        <div class="rtxt">
+                            <p>리메이크</p>
+                            <h3>리메이크</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/CMT-99_MA.png" alt="06">
+                        </p>
+                        <div class="rtxt">
+                            <p>큐리어스 매터</p>
+                            <h3>큐리어스 매터</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
