@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_basis</title>
+    <script>
+        document.title = '자바스크립트';
+        console.log('123'+(123+123)+"\n"+"결합연산자");
+        //+연산자--산술연산자(덧셈),결합연산자---이거는한줄주석
+        /*여러줄 주석*/
+        // document.body.style.background="#f00"; 아직 body를 불러들이지 않은 시점으로 배경색이 적용되지 않음.body에넣어야함.
+    </script>    
+
+</head>
+<body>
+    <h2>Demo JavaScript in Body</h2>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            document.getElementById('demo').innerHTML = 'Paragraph changed.';
+        }
+        document.body.style.background="#f00";
+    </script>
+    
+    <!-- 위에 이름들 큰따옴표도, 작음따옴표도 사용 가능 -->
+</body>
+</html>
