@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_classList_forEach</title>
+    <style>
+        img{position: absolute; width: 300px; top: 0; left: 200px; display: none;}
+        img.on{display: block;}
+    </style>
+</head>
+<body>    
+    <p class="txt">photo1</p>
+    <p class="txt">photo2</p>
+    <p class="txt">photo3</p>
+    <p class="txt">photo4</p>
+    <p class="txt">photo5</p>
+    <p class="txt">photo6</p>
+    <div>
+        <img src="../images/photo1.jpg" alt="photo1">
+        <img src="../images/photo2.jpg" alt="photo2">
+        <img src="../images/photo3.jpg" alt="photo3">
+        <img src="../images/photo4.jpg" alt="photo4">
+        <img src="../images/photo5.jpg" alt="photo5">
+        <img src="../images/photo6.jpg" alt="photo6">
+    </div>
+    <script>
+        document.getElementsByTagName("img")[0].classList.add("on");
+        document.querySelectorAll(".txt").forEach(function(keys,item){
+            console.log(keys);
+            keys.onclick=function(){
+                console.log(item);
+                document.querySelectorAll("img").forEach(function(value,key){
+                    value.classList.remove("on")
+                })
+                document.getElementsByTagName("img")[item].classList.add("on");
+            }
+        })
+    </script>
+</body>
+</html>
