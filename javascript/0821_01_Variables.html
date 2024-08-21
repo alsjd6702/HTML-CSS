@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        var userName = "그린";
+        var userId = "컴퓨터";
+        var userId = "computer";
+        userId = "12345";
+        var pw;
+        {var pw = "aaaaa";}
+        //{}안에 있어서 안에서만 처리가 됨. 밖에서는 적용이 되지 않는다는 것.
+        pw = 456789;
+        document.write(userName + userId + pw);
+
+        let name = "그린";
+        let name1,name2,name3;
+        name1 = "green";
+        name2 = "red";
+        name3 = "blue";
+        //선언을 먼저 하고, 할당을 해야 함. 할당을 먼저 하면 적용이 안됨.
+        {let name1 = "computer";}
+
+        const number = 123;
+        //const는 재할당이 안됨. 선언과 동시에 할당을 해야 함. 재선언도 안됨.
+        const a01 = true;
+        //참인 데이터 - 논리형 데이터
+        //문자는 "true"
+        const a02 = null;
+        const a03 = 99;        
+        document.write(a01 + a02);
+        //같게 보이지만, 다르다.
+        //삼항연산 조건 ? 참인값 : 거짓인값
+        document.write((a01 ? "참" : "거짓") + "<br>");
+        document.write(a03 >= 100 ? "100보다 큰 수" : "100보다 작은 수");
+    </script>
+</body>
+</html>
