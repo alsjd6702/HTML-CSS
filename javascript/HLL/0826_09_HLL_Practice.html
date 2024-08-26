@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLL</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .button{width: 1200px; height: 44px; margin: 50px auto 0; display: flex; justify-content: center; align-items: center; gap: 10px;}
+        .button p{text-align: center; border: 1px solid #ccc; line-height: 44px; padding: 0 15px; color: #111; font-size: 14px; cursor: pointer;}
+        .button p.on{color: #fff; background: #211955;}
+
+        .img1{width: 1200px; height: 80px; position: relative; margin: 100px auto 70px;}
+        .img1 p{width: 100%; height: 100%; position: absolute; left: 50%; top: 0; transform: translateX(-50%); background-repeat: no-repeat; background-position: center; background-size: contain; display: none;}
+        .img1 p.on{display: block;}
+
+        .img2{width: 100%; height: 624px; position: relative;}
+        .img2 p{width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-repeat: no-repeat; background-position: center; background-size: cover; display: none;}
+        .img2 p.on{display: block;}
+    </style>
+</head>
+<body>
+    <div class="button">
+        <p>ELLE</p>
+        <p>COSMOPOLITAN</p>
+        <p>Harper's BAZAAR</p>
+        <p>ESQUIRE</p>
+        <p>STUDIO DOT</p>
+        <p>YEET</p>
+    </div>
+    <div class="img1">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div class="img2">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <script>
+        function myfnc1(){
+            document.querySelectorAll(".button p").forEach(function(v,k){
+                v.classList.remove("on");
+            })
+        }
+        function myfnc2(){
+            document.querySelectorAll(".img1 p").forEach(function(v,k){
+                v.classList.remove("on");
+            })
+        }
+        function myfnc3(){
+            document.querySelectorAll(".img2 p").forEach(function(v,k){
+                v.classList.remove("on");
+            })
+        }
+        let button = document.querySelectorAll(".button p");
+        let title = document.querySelectorAll(".img1 p");
+        let titleImg = "url(images/title1.svg)";
+        let visual = document.querySelectorAll(".img2 p");
+        let visualImg = "url(images/visual1.png)";
+
+        button[0].classList.add("on");
+        title[0].classList.add("on");
+        title[0].style.backgroundImage = titleImg
+        visual[0].classList.add("on");
+        visual[0].style.backgroundImage = visualImg
+
+        document.querySelectorAll(".button p").forEach(function(v,k){
+            v.onclick = function(){
+                myfnc1();
+                v.classList.add("on");
+
+                title.forEach(function(v,k){
+                    myfnc2();
+                });
+                title[k].classList.add("on");                             
+                title[k].style.backgroundImage = titleImg.replace(titleImg.slice(-6,-5),k+1);
+
+                visual.forEach(function(v,k){
+                    myfnc3();
+                });
+                visual[k].classList.add("on");
+                visual[k].style.backgroundImage = visualImg.replace(visualImg.slice(-6,-5),k+1);
+            };
+        });           
+    </script>
+</body>
+</html>
