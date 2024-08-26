@@ -18,26 +18,43 @@
             font-family: Happiness-Sans-Regular;
             src: url(Planet_webfonts/Happiness-Sans-Regular.woff) format("woff");
         }
+        
         *{margin: 0; padding: 0;}
         ul{list-style: none;}
         a{text-decoration: none;}
 
         header{width: 100%;}
+
         header div.kakao{width: 100%; height: 42px; background: #1b1b1b;}
         header div.kakao p a{display: block; color: #fff; font-family: Happiness-Sans-Regular; line-height: 42px; padding: 0 30px; position: relative; box-sizing: border-box;}
-        header div.kakao p a::after{content: ""; width: 20px; height: 20px; background-image: url(Planet_images/icon_arrow_right.svg); position: absolute; left: 14.5%; top: 50%; animation-name: moving; animation-timing-function: ease-in-out; animation-duration: 0.7s; animation-iteration-count: infinite; animation-direction: alternate;}
+        header div.kakao p a::after{content: ""; width: 20px; height: 20px; background-image: url(Planet_images/icon_arrow_right.svg); position: absolute; left: 265px; top: 50%; animation-name: moving; animation-timing-function: ease-in-out; animation-duration: 0.7s; animation-iteration-count: infinite; animation-direction: alternate;}
         @keyframes moving {
             0%{transform: translate(0,-50%);}
             100%{transform: translate(15px,-50%);}
         }
 
-        header div.head{width: 100%; height: 56px; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; box-sizing: border-box;}
+        header div.head{width: 100%; height: 70px; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; box-sizing: border-box; background: #fff; position: relative; border-bottom: 1px solid #ddd;}
+
         header div.head div.logo{width: 80px;}
-        header div.head div.logo a{display: block;}
+        header div.head div.logo a{display: block; font-size: 0;}
         header div.head div.logo a img{width: 100%; object-fit: cover;}
 
-        header div.search a{display: inline-block; width: 32px; height: 32px;}
-        header div.search a img{width: 100%; height: 100%; object-fit: cover;}
+        header div.head nav{flex: 0 1 50%;}
+        header div.head nav ul.menu{display: flex;}
+        header div.head nav div.bg{position: absolute; left: 0; top: 70px; width: 100%; height: 0; background: #fff; transition: 0.3s;}
+        header div.head nav ul.menu > li{flex: 0 1 25%; position: relative;}
+        header div.head nav ul.menu:hover > li ul.sub,
+        header div.head nav ul.menu:hover ~ div.bg{height: 150px;}
+        header div.head nav ul.menu > li > a{color: #1b1b1b; font-size: 20px; font-family: Happiness-Sans-Bold; line-height: 70px; display: block; text-align: center;}
+        header div.head nav ul.menu > li ul.sub{position: absolute; left: 0; top: 70px; width: 100%; transition: 0.3s; height: 0; overflow: hidden; z-index: 1;}
+        header div.head nav ul.menu > li ul.sub li{width: 226.5px;}
+        header div.head nav ul.menu > li ul.sub li a{display: block; line-height: 35px; color: #1b1b1b; font-size: 17px; font-family: Happiness-Sans-Regular; text-align: center;}
+        header div.head nav ul.menu > li ul.sub li a:first-child{padding-top: 5px;}
+
+
+        header div.head div.search{font-size: 0;}
+        header div.head div.search a{display: inline-block; width: 32px; height: 32px; padding: 0 5px;}
+        header div.head div.search a img{width: 100%; object-fit: cover;}
     </style>
 </head>
 <body>
@@ -93,6 +110,7 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="bg"></div>
             </nav>
             <div class="search">
                 <a href="#">
