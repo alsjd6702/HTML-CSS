@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전력 · 집단에너지 | GS 에너지</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        
+        .Wrap{width: 1520px; margin: 50px auto 0;}
+        .Wrap li.txt{width: 100%; height: 121px; border-bottom: 1px solid #ddd; position: relative;}
+        .Wrap li.txt:first-child{border-top: 1px solid #000;}
+        /* .Wrap li.txt:nth-child(3){border-top: 1px solid #ddd;} */
+        
+        .Wrap li.txt a{display: block;}
+        .Wrap li.txt a > p{font-size: 32px; font-weight: bold; color: #000; padding: 40px 0 40px 20px;}
+        .Wrap li.txt a div.icon{width: 23px; height: 23px; position: absolute; right: 50px; top: 50%; transform: translateY(-50%);}
+        .Wrap li.txt a div.icon p{position: absolute; background: #000;}
+        .Wrap li.txt a div.icon p:first-child{width: 23px; height: 3px; left: 0; top: 50%; transform: translateY(-50%);}        
+        .Wrap li.txt a div.icon p:last-child{width: 3px; height: 23px; left: 50%; top: 0; transform: translateX(-50%); transition: 0.3s;}
+        .Wrap li.txt a div.icon p.rotate{transform: rotate(90deg);}
+        
+        .Wrap li.img{width: 100%; height: 400px; padding: 50px 0; display: none;}
+        .Wrap li.img p{width: 100%;}
+        .Wrap li.img p img{width: 100%; object-fit: cover;}
+    </style>
+</head>
+<body>
+    <ul class="Wrap">
+        <li class="txt GSpower">
+            <a href="#">
+                <p>GS파워</p>
+                <div class="icon">
+                    <p></p>
+                    <p></p>
+                </div>
+            </a>
+        </li>        
+        <li class="img GSpowerImg">
+            <p>
+                <img src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg" alt="GSpower">
+            </p>
+        </li>
+        <li class="txt Incheon">
+            <a href="#">
+                <p>인천종합에너지</p>
+                <div class="icon">
+                    <p></p>
+                    <p></p>
+                </div>
+            </a>
+        </li>
+        <li class="img IncheonImg">
+            <p>
+                <img src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg" alt="Incheon">
+            </p>
+        </li>
+    </ul>
+
+    <script>
+        let txt = document.querySelectorAll(".Wrap .txt");
+        let icon = document.querySelectorAll(".Wrap .txt a .icon p");
+
+        txt.forEach(function(value){
+            value.querySelectorAll("a").onclick = function(e){
+                e.preventDefault();
+                icon[1].classList.add("rotate");
+            };
+        });
+    </script>
+</body>
+</html>

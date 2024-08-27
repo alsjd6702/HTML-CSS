@@ -17,49 +17,62 @@
         @font-face {
             font-family: Happiness-Sans-Regular;
             src: url(Planet_webfonts/Happiness-Sans-Regular.woff) format("woff");
-        }
-        
+        }        
         *{margin: 0; padding: 0;}
         ul{list-style: none;}
         a{text-decoration: none;}
 
         header{width: 100%;}
-
         header div.kakao{width: 100%; height: 42px; background: #1b1b1b;}
         header div.kakao p a{display: block; color: #fff; font-family: Happiness-Sans-Regular; line-height: 42px; padding: 0 30px; position: relative; box-sizing: border-box;}
-        header div.kakao p a::after{content: ""; width: 20px; height: 20px; background-image: url(Planet_images/icon_arrow_right.svg); position: absolute; left: 265px; top: 50%; animation-name: moving; animation-timing-function: ease-in-out; animation-duration: 0.7s; animation-iteration-count: infinite; animation-direction: alternate;}
+        header div.kakao p a::after{content: ""; width: 20px; height: 20px; background-image: url(Planet_images/icon_arrow_right.svg); position: absolute; left: 240px; top: 50%; animation-name: moving; animation-timing-function: ease-in-out; animation-duration: 0.7s; animation-iteration-count: infinite; animation-direction: alternate;}
         @keyframes moving {
             0%{transform: translate(0,-50%);}
             100%{transform: translate(15px,-50%);}
         }
 
         header div.head{width: 100%; height: 70px; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; box-sizing: border-box; background: #fff; position: relative; border-bottom: 1px solid #eee;}
-
         header div.head div.logo{width: 80px;}
         header div.head div.logo a{display: block; font-size: 0;}
         header div.head div.logo a img{width: 100%; object-fit: cover;}
 
         header div.head nav{flex: 0 1 50%;}
         header div.head nav ul.menu{display: flex;}
-        header div.head nav div.bg{position: absolute; left: 0; top: 70px; width: 100%; height: 0; background: #fff; transition: 0.3s;}
+        header div.head nav div.bg{position: absolute; left: 0; top: 70px; width: 100%; height: 0; background: #fff; transition: 0.3s; z-index: 1;}
         header div.head nav ul.menu > li{flex: 0 1 25%; position: relative;}
-        header div.head nav ul.menu > li::after{content: ""; width: 1px; height: 3px; background: transparent; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); transition: 0.3s;}
-        header div.head nav ul.menu > li > a{color: #1b1b1b; font-size: 20px; font-family: Happiness-Sans-Bold; line-height: 70px; display: block; text-align: center;}
-        header div.head nav ul.menu > li ul.sub{position: absolute; left: 0; top: 70px; width: 100%; transition: 0.3s; height: 0; overflow: hidden; z-index: 1;}
+        header div.head nav ul.menu > li::after{content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-image: url(Planet_images/planet2536_logo_bg.png); width: 100%; height: 60px; background-size: contain; background-repeat: no-repeat; background-position: 54%; opacity: 0; transition: 0.3s;}
+        /* header div.head nav ul.menu > li::after{content: ""; width: 1px; height: 3px; background: transparent; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); transition: 0.3s;} */
+        header div.head nav ul.menu > li > a{color: #1b1b1b; font-size: 20px; font-family: Happiness-Sans-Bold; line-height: 70px; display: block; text-align: center; z-index: 1;}
+        header div.head nav ul.menu > li ul.sub{position: absolute; left: 0; top: 70px; width: 100%; transition: 0.3s; height: 0; overflow: hidden; z-index: 2;}
         header div.head nav ul.menu > li ul.sub li{width: 226.5px;}
         header div.head nav ul.menu > li ul.sub li a{display: block; line-height: 40px; color: #1b1b1b; font-size: 17px; font-family: Happiness-Sans-Regular; text-align: center;}
-        header div.head nav ul.menu > li ul.sub li a:first-child{padding-top: 5px;}        
+        header div.head nav ul.menu > li ul.sub li a:first-child{padding-top: 5px;}  
         header div.head nav ul.menu:hover > li ul.sub,
-        header div.head nav ul.menu:hover ~ div.bg{height: 155px;}        
-        header div.head nav ul.menu > li:hover::after{transform: translateX(-50%) scaleX(200); background: #336949;}
+        header div.head nav ul.menu:hover ~ div.bg{height: 170px;}        
+        /* header div.head nav ul.menu > li:hover::after{transform: translateX(-50%) scaleX(200); background: #336949;} */
+        header div.head nav ul.menu > li:hover::after{opacity: 0.5;}
         header div.head nav ul.menu > li:hover > a{color: #336949;}
         header div.head nav ul.menu > li:hover ul.sub li a:hover{color: #336949; font-size: 18px;}
-
-
 
         header div.head div.search{font-size: 0;}
         header div.head div.search a{display: inline-block; width: 32px; height: 32px; padding: 0 5px;}
         header div.head div.search a img{width: 100%; object-fit: cover;}
+
+        div.con{width: 95%; max-width: 1400px; height: 600px; margin: 0 auto;}
+        div.con div.notice{width: 100%; height: 100%; position: relative;}
+        div.con div.notice p{width: 100%; height: 100%; position: absolute;}
+        div.con div.notice p.notice1::after{content: ""; width: 625px; height: 440px; position: absolute; right: 100px; top: 50%; transform: translateY(-50%); background-image: url(Planet_images/review_event_bg.png); animation-name: motion1; animation-timing-function: ease-in-out; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;}
+        div.con div.notice p img{width: 100%; height: 100%; object-fit: contain;}
+        div.con div.notice p.notice3::after{content: ""; width: 370px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 157px; background-image: url(Planet_images/finding_leader_bg.png); animation-name: motion2; animation-timing-function: ease-in-out; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;}
+        @keyframes motion1 {
+            0%{transform: translateY(-53%);}
+            100%{transform: translateY(-50%);}
+        }
+        @keyframes motion2 {
+            0%{transform: translate(-50%,3px);}
+            100%{transform: translate(-50%,-3px);}
+        }
+
     </style>
 </head>
 <body>
@@ -132,8 +145,11 @@
     </header>
     
     <div class="con">
-        <div class="notice"></div>
-        <!-- 리뷰이벤트,번개모임,리더모집 -->
+        <div class="notice">
+            <p class="notice1"><img src="Planet_images/review_event_nonbg.png" alt="review_event_nonbg"></p>
+            <p class="notice2"><img src="Planet_images/gathering_final.png" alt="gathering_final"></p>
+            <p class="notice3"><img src="Planet_images/finding_leader_nonbg.png" alt="finding_leader_nonbg"></p>
+        </div>
         <div class="class_planed"></div>
         <div class="class_decided"></div>
         <div class="class_ongoing"></div>
@@ -145,11 +161,7 @@
         <div class="operation_info"></div>
         <div class="supplier_info"></div>
     </footer>
-    <!-- 플래닛2536 - 회사소개
-    클래스 - 타입별, 시간별
-    공지사항 - 공지사항, 이달의 이벤트, 멤버혜택(예치금)
-    커뮤니티 - 번개모임, 취미인증, 취미연구소, 자주묻는질문
-    고객센터
+    <!--  고객센터
 이달의 이벤트 - 팝업 -->
 </body>
 </html>

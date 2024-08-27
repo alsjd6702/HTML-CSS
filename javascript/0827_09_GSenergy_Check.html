@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전력 · 집단에너지 | GS 에너지</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        
+        ul.list{width: 95%; max-width: 1520px; margin: 50px auto;}
+        ul.list div.title{height: 95px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;}
+        ul.list div.title span{position: relative; width: 23px; display: block;}
+        ul.list div.title span::before, ul.list div.title span::after{content: ""; position: absolute; left: 50%; top: 50%; background: #000; border-radius: 2px; transition: 0.2s linear;}
+        ul.list div.title span::before{width: 23px; height: 3px; margin: -1px 0 0 -11px;}
+        ul.list div.title span::after{width: 3px; height: 23px; margin: -11px 0 0 -1px;}
+        ul.list div.title span.on::after{transform: rotate(90deg); opacity: 0;}
+        ul.list .contents{height: 0; overflow: hidden; transition: 0.5s;}
+        ul.list .contents.on{height: 400px;}
+        ul.list .contents p{transform: translateY(-20px); opacity: 0; transition: 1.2s;}
+        ul.list .contents p.on{transform: translateY(-10px); opacity: 1;}
+        ul.list .contents img{width: 100%; object-fit: cover;}
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li>
+            <div class="title">
+                <h2>GS파워</h2>
+                <span></span>
+            </div>
+            <div class="contents">
+                <p>
+                    <img src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg" alt="01">
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="title">
+                <h2>인천종합에너지</h2>
+                <span></span>
+            </div>
+            <div class="contents">
+                <p>
+                    <img src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg" alt="02">
+                </p>
+            </div>
+        </li>
+    </ul>
+    <script>
+        let listItem = document.querySelectorAll(".list li");
+
+        function myfnc(){
+            let bool = this.querySelector("span").classList.contains("on");
+            console.log(bool);
+            listItem.forEach(function(v,k){
+                v.querySelector("span").classList.remove("on");
+                v.querySelector(".contents").classList.remove("on");
+                v.querySelector(".contents p").classList.remove("on");
+            })
+            if(!bool){
+                this.querySelector("span").classList.add("on");
+                this.querySelector(".contents").classList.add("on");
+                this.querySelector(".contents p").classList.add("on");
+            }
+        }
+        listItem.forEach(function(v,k){
+            v.onclick = myfnc;
+            //myfnc()로 넣으면 this라는 개념을 찾지 못함. ()없이 넣어야 함.
+        });
+    </script>
+</body>
+</html>
