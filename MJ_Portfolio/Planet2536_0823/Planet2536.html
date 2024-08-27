@@ -43,13 +43,16 @@
         header div.head nav ul.menu{display: flex;}
         header div.head nav div.bg{position: absolute; left: 0; top: 70px; width: 100%; height: 0; background: #fff; transition: 0.3s;}
         header div.head nav ul.menu > li{flex: 0 1 25%; position: relative;}
-        header div.head nav ul.menu:hover > li ul.sub,
-        header div.head nav ul.menu:hover ~ div.bg{height: 150px;}
+        header div.head nav ul.menu > li::after{content: ""; width: 200px; height: 3px; background: #336949; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
         header div.head nav ul.menu > li > a{color: #1b1b1b; font-size: 20px; font-family: Happiness-Sans-Bold; line-height: 70px; display: block; text-align: center;}
         header div.head nav ul.menu > li ul.sub{position: absolute; left: 0; top: 70px; width: 100%; transition: 0.3s; height: 0; overflow: hidden; z-index: 1;}
         header div.head nav ul.menu > li ul.sub li{width: 226.5px;}
         header div.head nav ul.menu > li ul.sub li a{display: block; line-height: 35px; color: #1b1b1b; font-size: 17px; font-family: Happiness-Sans-Regular; text-align: center;}
-        header div.head nav ul.menu > li ul.sub li a:first-child{padding-top: 5px;}
+        header div.head nav ul.menu > li ul.sub li a:first-child{padding-top: 5px;}        
+        header div.head nav ul.menu:hover > li ul.sub,
+        header div.head nav ul.menu:hover ~ div.bg{height: 150px;}
+        header div.head nav ul.menu > li:hover > a{color: #336949;}
+
 
 
         header div.head div.search{font-size: 0;}
