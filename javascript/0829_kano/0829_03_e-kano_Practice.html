@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카노</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+
+        div.con{display: flex; width: 100%; height: 990px; background: #eee; padding: 100px 0 100px 220px; box-sizing: border-box; position: relative; margin: 100px 0;}
+        div.con div.contxt{width: 750px;}
+        div.con div.contxt p.Title{font-size: 54px; font-weight: lighter; width: 650px; line-height: 70px; position: relative; left: 50px; padding-bottom: 70px; box-sizing: border-box;}
+        div.con div.contxt ul.txt{width: 100%; position: relative; z-index: 1;}
+        div.con div.contxt ul.txt li{margin-bottom: 20px; padding: 40px; border-radius: 30px;}
+        div.con div.contxt ul.txt li.on{background: #BF1E2E; box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.19);}
+
+        div.con div.contxt ul.txt li a{display: flex; align-items: center;}
+        div.con div.contxt ul.txt li a p.icon{width: 83px; height: 93px; margin-left: 20px;}
+        div.con div.contxt ul.txt li a p.icon img{width: 100%; height: 100%; object-fit: contain;}
+        div.con div.contxt ul.txt li a div.detail{padding-left: 30px; position: relative;}
+        div.con div.contxt ul.txt li a div.detail.on::after{content: "→"; position: absolute; right: -110px; top: 50%; transform: translateY(-50%); width: 60px; height: 60px; background: #fff; color: #000; font-size: 30px; border-radius: 50%; text-align: center; line-height: 60px;}
+
+        div.con div.contxt ul.txt li a div.detail p.on{color: #fff;}
+
+        div.con div.contxt ul.txt li a div.detail p:first-child{font-size: 28px; margin-bottom: 10px;}
+        div.con div.contxt ul.txt li a div.detail p:last-child{font-size: 18px; color: #939393;}
+
+        div.con ul.img{height: 100%; position: absolute; right: 0; top: 0;}
+        div.con ul.img li{position: absolute; right: 0; top: 0; height: 100%;}
+        div.con ul.img li img{height: 100%; object-fit: cover; display: none;}
+        div.con ul.img li img.on{display: block;}
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="contxt">
+            <p class="Title">
+                카노와 함께하는<br>브랜드를 소개합니다.
+            </p>
+            <ul class="txt">
+                <li>
+                    <a href="#">
+                        <p class="icon">
+                            <img src="images/icon1-1.png" alt="icon1-1">
+                        </p>
+                        <div class="detail">
+                            <p>이지스토리</p>
+                            <p>산뜻한 일상의 이야기를 전하는 정직한 브랜드입니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="icon">
+                            <img src="images/icon2-1.png" alt="icon2-1">
+                        </p>
+                        <div class="detail">
+                            <p>페슬러</p>
+                            <p>반려동물과 함께하는 우리의 일상을 위한 브랜드입니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="icon">
+                            <img src="images/icon3-1.png" alt="icon3-1">
+                        </p>
+                        <div class="detail">
+                            <p>홈케어</p>
+                            <p>보다 나은 홈 라이프를 위한 방법을 만드는 브랜드입니다.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="img">
+            <li>
+                <img src="images/easystory_img.jpg" alt="easystory_img">
+            </li>
+            <li>
+                <img src="images/petstler_img.jpg" alt="petstler_img">
+            </li>
+            <li>
+                <img src="images/homecare_img.jpg" alt="homecare_img">
+            </li>
+        </ul>
+    </div>    
+    <script>
+        let txt = document.querySelectorAll(".txt li");
+        txt[0].classList.add("on");
+    </script>
+</body>
+</html>
