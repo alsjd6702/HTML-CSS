@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR PRODUCTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        div.Retail{width: 1210px; margin: 100px auto 700px;}
+        div.Retail div.Prod{width: 100%;}
+        div.Retail h1, div.Retail div.Prod h2{font-size: 42px; color: #D1A050; font-family: "Archivo", sans-serif; margin-bottom: 20px;}
+        div.Retail div.Prod h2{font-weight: 500;}
+        div.Retail div.Prod ul.Almond{width: 100%;}
+        div.Retail div.Prod ul.Almond li{border-top: 1px solid #D1A050;}
+        div.Retail div.Prod ul.Almond li p{font-size: 24px; color: #D1A050; font-family: "Archivo", sans-serif; padding: 20px 40px; position: relative; cursor: pointer;}
+        div.Retail div.Prod ul.Almond li p.on{font-weight: 700;}
+        div.Retail div.Prod ul.Almond li p::before{content: "+"; font-size: 25px; position: absolute; left: 17px; top: 17px; transition: 0.3s;}
+        div.Retail div.Prod ul.Almond li p.on::before{transform: rotate(45deg); font-weight: 500;}
+        div.Retail div.Prod ul.Almond li div{padding: 0 40px; height: 0; overflow: hidden; transition: 0.5s; line-height: 440px;}
+        div.Retail div.Prod ul.Almond li div.on{height: 454px;}
+        div.Retail div.Prod ul.Almond li div img{width: 100%; object-fit: cover; vertical-align: middle;}
+    </style>
+</head>
+<body>
+    <div class="Retail">
+        <h1>RETAIL</h1>
+        <div class="Prod">
+            <h2>Slices - Almond Base</h2>
+            <ul class="Almond">
+                <li>
+                    <p>AMERICAN</p>
+                    <div>
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg" alt="AMERICAN">
+                    </div>
+                </li>
+                <li>
+                    <p>CHEDDAR</p>
+                    <div>
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg" alt="CHEDDAR">
+                    </div>
+                </li>
+                <li>
+                    <p>PROVOLONE</p>
+                    <div>
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg" alt="PROVOLONE">
+                    </div>
+                </li>
+                <li>
+                    <p>PEPPER JACK</p>
+                    <div>
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg" alt="PEPPERJACK">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let contitle = document.querySelectorAll(".Almond li"); 
+        contitle.forEach(function(v){
+            v.querySelector("p").onclick = function(){
+                let bool = this.classList.contains("on");
+                if(bool){
+                    this.classList.remove("on");               
+                    v.querySelector("div").classList.remove("on");               
+                } else{
+                    this.classList.add("on");
+                    v.querySelector("div").classList.add("on");
+                }
+            };
+        });
+    </script>    
+</body>
+</html>
