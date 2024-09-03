@@ -13,7 +13,7 @@
 	<button>Test input</button>
 	<p id="p01"></p>
  <script>
-	 function myFunction() {
+	function myFunction() {
 		const message = document.getElementById("p01");
 		message.innerHTML = "";
 		let x = document.getElementById("demo").value;
@@ -31,10 +31,10 @@
 		finally {
 			document.getElementById("demo").value = "";
 		}
-		}
-		document.querySelector("button").onclick = function(){
-			myFunction();
-		}
+	}
+	document.querySelector("button").onclick = function(){
+		myFunction();
+	}
  </script>
 </body>
 </html>

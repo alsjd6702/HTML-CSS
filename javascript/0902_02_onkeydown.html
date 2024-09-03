@@ -48,6 +48,7 @@
 		document.getElementById("down").onclick = function(){
 			document.querySelector(".box").style.transform = "rotateX("+(x-=90)+"deg)";
 		}
+
 		document.onkeydown = function(e){
             clearInterval(interval);
 			console.log(e.keyCode);
@@ -61,6 +62,7 @@
 				document.querySelector(".box").style.transform = "rotateX("+(x-=90)+"deg)";
 			}
 		}
+		
 		let interval = setInterval(function(){
 			document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
 		},1000);
