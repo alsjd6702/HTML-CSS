@@ -25,7 +25,7 @@
         header{width: 100%;}
         header div.kakao{width: 100%; height: 42px; background: #1b1b1b;}
         header div.kakao p a{display: block; color: #fff; font-family: Happiness-Sans-Regular; line-height: 42px; padding: 0 30px; position: relative; box-sizing: border-box;}
-        header div.kakao p a::after{content: ""; width: 20px; height: 20px; background-image: url(Planet_images/icon_arrow_right.svg); position: absolute; left: 240px; top: 50%; animation-name: moving; animation-timing-function: ease-in-out; animation-duration: 0.7s; animation-iteration-count: infinite; animation-direction: alternate;}
+        header div.kakao p a::after{content: ""; width: 20px; height: 20px; background-image: url(Planet_images/icon_arrow_right.svg); position: absolute; left: 260px; top: 50%; animation-name: moving; animation-timing-function: ease-in-out; animation-duration: 0.7s; animation-iteration-count: infinite; animation-direction: alternate;}
         @keyframes moving {
             0%{transform: translate(0,-50%);}
             100%{transform: translate(15px,-50%);}
@@ -55,6 +55,42 @@
         header div.head div.search{font-size: 0;}
         header div.head div.search a{display: inline-block; width: 32px; height: 32px; padding: 0 5px;}
         header div.head div.search a img{width: 100%; object-fit: cover;}
+
+        div.con{width: 100%; max-width: 1900px; margin-top: 70px;} 
+        div.con div.notice{width: 100%; padding: 0 20px; box-sizing: border-box; margin: 0 auto; display: grid; grid-template-columns: repeat(16,112.4px); grid-template-rows: repeat(4,112.4px); grid-gap: 4px;}
+        div.con div.notice > p{border-radius: 10px; overflow: hidden; animation-name: opacity; animation-duration: 1.5s; opacity: 0; animation-fill-mode: forwards;}
+        div.con div.notice > p a{display: inline-block; font-size: 0; width: 100%; height: 100%;}
+        div.con div.notice > p img{width: 100%; height: 100%; object-fit: cover; transition: 0.3s;}
+        div.con div.notice > p.noticeCon:hover img{transform: scale(105%);}
+        div.con div.notice > p.noticeImg1{grid-column: 1 / 5; grid-row: 1 / 3; animation-delay: 0.4s;}
+        div.con div.notice > p.noticeImg2{grid-column: 7 / 9; grid-row: 1 / 3;}
+        div.con div.notice > p.noticeImg3{grid-column: 11 / 15; grid-row: 1 / 3; animation-delay: 0.2s;}
+        div.con div.notice > p.noticeImg4{grid-column: 15 / 16; grid-row: 1 / 2; animation-delay: 0.4s;}
+        div.con div.notice > p.noticeImg5{grid-column: 5 / 6; grid-row: 4 / 5;}
+        div.con div.notice > p.noticeImg6{grid-column: 6 / 7; grid-row: 3 / 4; animation-delay: 0.6s;}
+        div.con div.notice > p.noticeImg7{grid-column: 9 / 13; grid-row: 3 / 5; animation-delay: 0.6s;}
+        div.con div.notice > p.noticeImg8{grid-column: 15 / 17; grid-row: 3 / 5; animation-delay: 0.2s;}
+        div.con div.notice ul{grid-column: 1 / 5; grid-row: 3 / 5; animation-name: opacity; animation-duration: 1.5s; opacity: 0; animation-fill-mode: forwards; animation-delay: 0.8s; position: relative;}
+        div.con div.notice ul li{position: absolute; left: 0; top: 30%;}
+        div.con div.notice ul li p:first-child{font-family: Happiness-Sans-Bold; font-size: 28px; padding-bottom: 10px;}
+        div.con div.notice ul li p:last-child{font-family: Happiness-Sans-Title; color: #336949; font-size: 60px;}
+        @keyframes opacity {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
+        div.con div.intro{width: 100%; padding: 150px 20px 0; display: flex; justify-content: space-between; position: relative; box-sizing: border-box; height: 3000px;}
+        div.con div.intro::before{content: ""; position: absolute; left: 0; top: 200px; width: 100%; height: 2px; background: #eee;}
+        div.con div.intro div.intro_txt{padding-top: 70px;}
+        div.con div.intro div.intro_txt h1{font-size: 80px; position: sticky; top: 0; font-family: Happiness-Sans-Title;}
+        div.con div.intro div.intro_txt h1 span{color: #336949; font-size: 100px;}   
+        div.con div.intro div.intro_txt div.intro_detail{position: absolute; top: 450px; height: 100%;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position{position: sticky; top: 200px; height: 100%;}
+        div.con div.intro div.intro_txt div.intro_detail p{font-size: 60px; font-family: Happiness-Sans-Bold;}
+        div.con div.intro div.intro_txt div.intro_detail p:nth-of-type(1){position: sticky; top: 200px; padding-left: 200px;}
+        div.con div.intro p.logo{position: sticky; right: 0; top: 30px; height: 480px;}
+        div.con div.intro p.logo img{filter: opacity(0.2);}
+        /* 물방울 모양 이미지 넣어서 키워드로 ~고, ~고, ~한 ~입니다. 소개 */
 
         /* div.con{width: 100%;}
         div.con div.notice{width: 100%; height: 600px; position: relative;}
@@ -178,7 +214,58 @@
     </header>
 
     <div class="con">
-        
+        <div class="notice">
+            <p class="noticeImg1 noticeCon">
+                <a href="#"><img src="Planet_images/noticeImg1.png" alt="noticeImg1"></a>
+            </p>
+            <p class="noticeImg2">
+                <img src="Planet_images/noticeImg2.png" alt="noticeImg2">
+            </p>
+            <p class="noticeImg3 noticeCon">
+                <a href="#"><img src="Planet_images/noticeImg3.png" alt="noticeImg3"></a>
+            </p>
+            <p class="noticeImg4">
+                <img src="Planet_images/noticeImg4.png" alt="noticeImg4">
+            </p>
+            <p class="noticeImg5">
+                <img src="Planet_images/noticeImg5.png" alt="noticeImg5">
+            </p>
+            <p class="noticeImg6">
+                <img src="Planet_images/noticeImg6.jpg" alt="noticeImg6">
+            </p>
+            <p class="noticeImg7 noticeCon">
+                <a href="#"><img src="Planet_images/noticeImg7.png" alt="noticeImg7"></a>
+            </p>
+            <p class="noticeImg8">
+                <img src="Planet_images/noticeImg8.png.jpg" alt="noticeImg8">
+            </p>
+            <ul>
+                <li>
+                    <p>모두가 꿈꾸던 취미를 이룰 수 있는 공간</p>
+                    <p>플래닛 2536</p>
+                </li>
+            </ul>
+        </div>
+        <div class="intro">
+            <div class="intro_txt">
+                <h1><span>플래닛 2536</span>은</h1>
+                <div class="intro_detail">
+                    <div class="intro_detail_position">
+                        <p>공통 관심사를</p>
+                        <p>공유하고</p>
+                        <p>소통하면서</p>
+                        <p>함께 할 수 있는</p>
+                        <p>커뮤니티를 지향합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="logo">
+                <img src="Planet_images/planet2536_logo.png" alt="planet2536_logo">
+            </p>
+        </div>
+        <div class="sdf">
+            <p>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br></p>
+        </div>   
     </div>
     
     <!-- <div class="con">
