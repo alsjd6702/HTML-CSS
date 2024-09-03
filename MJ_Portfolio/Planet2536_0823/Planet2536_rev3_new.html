@@ -79,69 +79,27 @@
             100%{opacity: 1;}
         }
 
-        div.con div.intro{width: 100%; padding: 150px 20px 0; display: flex; justify-content: space-between; position: relative; box-sizing: border-box; height: 3000px;}
+        div.con div.intro{width: 100%; padding: 150px 20px 0; display: flex; justify-content: space-between; position: relative; box-sizing: border-box; height: 2000px;}
         div.con div.intro::before{content: ""; position: absolute; left: 0; top: 200px; width: 100%; height: 2px; background: #eee;}
-        div.con div.intro div.intro_txt{padding-top: 70px;}
-        div.con div.intro div.intro_txt h1{font-size: 80px; position: sticky; top: 0; font-family: Happiness-Sans-Title;}
-        div.con div.intro div.intro_txt h1 span{color: #336949; font-size: 100px;}   
-        div.con div.intro div.intro_txt div.intro_detail{position: absolute; top: 450px; height: 100%;}
-        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position{position: sticky; top: 200px; height: 100%;}
-        div.con div.intro div.intro_txt div.intro_detail p{font-size: 60px; font-family: Happiness-Sans-Bold;}
-        div.con div.intro div.intro_txt div.intro_detail p:nth-of-type(1){position: sticky; top: 200px; padding-left: 200px;}
+        div.con div.intro div.intro_txt{padding-top: 70px; height: 1000px;}
+        div.con div.intro div.intro_txt h1{font-size: 80px; position: sticky; top: 30px; font-family: Happiness-Sans-Title;}
+        div.con div.intro div.intro_txt h1 span{color: #336949; font-size: 100px;}
+
+        div.con div.intro div.intro_txt div.intro_detail{position: absolute; width: 100%; height: 100%; left: 0; top: 0;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position{position: sticky; top: 250px; padding: 0 0 100px 20px; margin-top: 500px; box-sizing: border-box;}        
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p::before{content: ""; position: absolute; top: -100px; left: 50%; transform: translateX(-60%); width: 300px; height: 300px; background-image: url(Planet_images/pngegg\ \(18\).png); background-size: cover; background-position: center; z-index: -1;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p{position: relative; font-size: 60px; font-family: Happiness-Sans-Bold; padding: 20px 0; width: 400px;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(1){left: 200px;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(2){left: 800px;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(3){left: 1400px;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(4){left: 300px;}
+        div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(5){left: 950px; width: 600px;}
+
         div.con div.intro p.logo{position: sticky; right: 0; top: 30px; height: 480px;}
-        div.con div.intro p.logo img{filter: opacity(0.2);}
-        /* 물방울 모양 이미지 넣어서 키워드로 ~고, ~고, ~한 ~입니다. 소개 */
-
-        /* div.con{width: 100%;}
-        div.con div.notice{width: 100%; height: 600px; position: relative;}
-        div.con div.notice p{width: 1400px; height: 600px; margin: 0 auto; position: absolute;}
-        div.con div.notice p.notice1::after{content: ""; width: 625px; height: 440px; position: absolute; right: 100px; top: 50%; transform: translateY(-50%); background-image: url(Planet_images/review_event_bg.png); animation-name: motion1; animation-timing-function: ease-in-out; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;}
-        div.con div.notice p img{width: 100%; height: 100%; object-fit: contain;}
-        div.con div.notice p.notice3::after{content: ""; width: 370px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 157px; background-image: url(Planet_images/finding_leader_bg.png); animation-name: motion2; animation-timing-function: ease-in-out; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;}
-        @keyframes motion1 {
-            0%{transform: translateY(-53%);}
-            100%{transform: translateY(-50%);}
-        }
-        @keyframes motion2 {
-            0%{transform: translate(-50%,3px);}
-            100%{transform: translate(-50%,-3px);}
-        }
-
-        div.con div.class{width: 100%; height: 800px; display: flex; padding: 50px 70px 50px 50px; box-sizing: border-box; border-radius: 100px;}
-        div.con div.planned{background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);}
-        div.con div.decided{background-image: linear-gradient(-90deg, #f6d365 0%, #fda085 100%);}
-        div.con div.ongoing{background-image: linear-gradient(90deg, #9795f0 0%, #fbc8d4 100%);}
-        div.con div.class div.class_txt{width: 400px; margin-right: 30px; box-sizing: border-box; position: relative;}
-        div.con div.class div.class_txt > p{color: #1b1b1b; text-align: center;}
-        div.con div.class div.class_txt > p:first-child{font-size: 50px; font-family: Happiness-Sans-Bold; line-height: 50px; padding: 30px 0 15px 0;}
-        div.con div.class div.class_txt > p:nth-child(2){font-size: 20px; font-family: Happiness-Sans-Regular;}
-        div.con div.class div.class_txt > div.per{margin-top: 80px; transition: 0.3s; position: absolute; display: none;}
-
-        div.con div.class div.class_txt > div.per.on{display: block;}
-
-        div.con div.class div.class_txt > div.per div.desc{margin-bottom: 60px; padding-left: 5px; box-sizing: border-box;}
-        div.con div.planned div.class_txt > div.per1 div.desc,
-        div.con div.ongoing div.class_txt > div.per4 div.desc
-        {padding-left: 27px;}
-        div.con div.ongoing div.class_txt > div.per2 div.desc{position: relative; left: -3px;}        
-        div.con div.ongoing div.class_txt > div.per5 div.desc{position: relative; left: -5px;}
-        div.con div.class div.class_txt > div.per div.desc p{font-size: 22px; text-align: center; font-family: Happiness-Sans-Bold; line-height: 40px; color: #0062ff;}
-        div.con div.class div.class_txt > div.per div.info p{font-family: Happiness-Sans-Regular; font-size: 17px; line-height: 33px; padding-left: 40px; box-sizing: border-box;}
-        div.con div.class div.class_txt > div.per div.info p.className{font-size: 20px; margin-bottom: 20px; font-family: Happiness-Sans-Bold; word-break: keep-all;}
-        div.con div.class div.class_txt > div.per div.info p.classMission2{text-indent: 51px;}
-        div.con div.class div.class_img{width: calc(100% - 400px); height: 700px;}
-        div.con div.class div.class_img ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
-        div.con div.class div.class_img ul li{flex: 0 1 31%; height: 700px; border-radius: 30px; overflow: hidden; border: 3px solid transparent; box-sizing: border-box;}
-        div.con div.class div.class_img ul li a{display: block; width: 100%; height: 100%;}
-        div.con div.class div.class_img ul li a p{width: 100%; height: 100%;}
-        div.con div.class div.class_img ul li a p img{width: 100%; height: 100%; object-fit: cover; transition: 0.5s;}
-        div.con div.class div.class_img ul li:hover{border-color: #336949;}
-        div.con div.class div.class_img ul li:hover a p img{transform: scale(105%);} */
-
-        /* div.con div.class{width: 100%; height: 400px;}        
-        
-        div.con div.class div.class_img ul li a p:first-child{width: 100%;}
-        div.con div.class div.class_img ul li a p:first-child img{width: 100%; object-fit: cover;} */
+        div.con div.intro p.logo img{width: 100%; height: 100%; object-fit: cover;}
+        div.con div.intro p.logo img.on{filter: opacity(0.5); transition: 0.5s;}
+        div.con div.intro p.logo img.on2{filter: opacity(0.3); transition: 0.5s;}
+        div.con div.intro p.logo img.on3{filter: opacity(0.1); transition: 0.5s;}
     </style>
 </head>
 <body>
@@ -584,5 +542,22 @@
     </footer>
     <!--  고객센터
 이달의 이벤트 - 팝업 -->
+    <script>
+        function logoopacity(){
+            logo.classList.remove("on");
+        }
+        window.onscroll = function(){
+            let ht = document.documentElement.scrollTop;
+            let logo = document.querySelector(".intro .logo img");
+            console.log(ht);
+            if(ht > 350){
+                logo.classList.add("on");
+            } if(ht > 550){                
+                logo.classList.add("on2");
+            } if(ht > 750){
+                logo.classList.add("on3");
+            }
+        }
+    </script>
 </body>
 </html>
