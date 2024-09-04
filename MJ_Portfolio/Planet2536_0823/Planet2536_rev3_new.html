@@ -100,6 +100,38 @@
         div.con div.intro p.logo img.on{filter: opacity(0.5); transition: 0.5s;}
         div.con div.intro p.logo img.on2{filter: opacity(0.3); transition: 0.5s;}
         div.con div.intro p.logo img.on3{filter: opacity(0.1); transition: 0.5s;}
+
+        div.con div.class{display: flex; margin-top: 100px; width: 100%; position: relative; background: #ccc;}
+        div.con div.planned{}
+        div.con div.class div.class_txt{width: 35%; position: sticky; top: 0; height: 100vh; padding: 100px 0; box-sizing: border-box;}
+        div.con div.class div.class_txt > p{text-align: center;}
+        div.con div.class div.class_txt > p:first-child{font-size: 50px; font-family: Happiness-Sans-Title; padding-bottom: 20px;}
+        div.con div.class div.class_txt > p:nth-child(2){font-size: 30px; font-family: Happiness-Sans-Bold;}
+        div.con div.class div.class_txt div.per{position: absolute; left: 0; top: 221px; width: 100%; display: none;}
+        div.con div.class div.class_txt div.per.on{display: block;}
+        div.con div.class div.class_txt div.per div.desc{padding: 80px 0 90px;}
+        div.con div.class div.class_txt div.per div.desc p{font-size: 25px; font-family: Happiness-Sans-Bold; line-height: 40px; text-align: center;}        
+        div.con div.class div.class_txt div.per p.className{font-size: 22px; font-family: Happiness-Sans-Bold; padding-bottom: 30px; word-break: keep-all; text-align: center;}
+        div.con div.class div.class_txt div.per div.info{width: 370px; margin: 0 auto;}
+        div.con div.class div.class_txt div.per div.info p{font-size: 18px; font-family: Happiness-Sans-Regular; line-height: 40px; letter-spacing: 0.7px;}
+        div.con div.class div.class_txt div.per div.info p strong{padding-right: 3px;}
+        div.con div.class div.class_txt div.per div.info p.classMission2{text-indent: 60px;}
+
+        div.con div.class div.class_img{width: 65%; padding: 100px 20px; box-sizing: border-box;}
+        div.con div.class div.class_img ul li:nth-child(2) a div.review{text-align: right;}
+        div.con div.class div.class_img ul li a{display: flex; gap: 30px; align-items: center; justify-content: space-between;}
+        div.con div.class div.class_img ul li a > p{width: 50%; border-radius: 50px; overflow: hidden; font-size: 0; position: relative;}
+        div.con div.class div.class_img ul li a > p::after{content: "자세히 보기"; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 30px; color: #fff; text-align: center; font-family: Happiness-Sans-Bold; border: 3px solid #fff; padding: 30px; border-radius: 30px; opacity: 0; transition: 0.5s; scale: 0; transform-origin: 0;}
+        div.con div.class div.class_img ul li a > p:hover::after{opacity: 1; scale: 1;}
+        div.con div.class div.class_img ul li a > p img{width: 100%; height: 100%; transition: 0.5s;}
+        div.con div.class div.class_img ul li a > p:hover img{transform: scale(110%); filter: brightness(0.5);}
+        div.con div.class div.class_img ul li a div.review{width: 50%;}
+        div.con div.class div.class_img ul li a div.review p{color: #000; font-size: 18px;}
+        div.con div.class div.class_img ul li a div.review p.className{font-size: 20px; font-family: Happiness-Sans-Bold; position: relative;}
+        /* div.con div.class div.class_img ul li a div.review p.className::after{content: ""; position: absolute; right: 0; top: 0; width: 50px; height: 50px; background-image: url(Planet_images/thumb.png); background-size: cover; background-repeat: no-repeat;} */
+        div.con div.class div.class_img ul li a div.review p:nth-child(2){color: rgb(87, 87, 87); font-family: Happiness-Sans-Bold; padding: 20px 0 10px;}
+        div.con div.class div.class_img ul li a div.review p:nth-child(3){font-family: Happiness-Sans-Regular; word-break: keep-all; line-height: 27px; letter-spacing: 1px;}
+                        
     </style>
 </head>
 <body>
@@ -221,17 +253,7 @@
                 <img src="Planet_images/planet2536_logo.png" alt="planet2536_logo">
             </p>
         </div>
-        <div class="sdf">
-            <p>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br></p>
-        </div>   
-    </div>
-    
-    <!-- <div class="con">
-        <div class="notice">
-            <p class="notice1"><img src="Planet_images/review_event_nonbg.png" alt="review_event_nonbg"></p>
-            <p class="notice2"><img src="Planet_images/gathering_final.png" alt="gathering_final"></p>
-            <p class="notice3"><img src="Planet_images/finding_leader_nonbg.png" alt="finding_leader_nonbg"></p>
-        </div>
+        
         <div class="class planned">
             <div class="class_txt">
                 <p>오픈예정 클래스</p>
@@ -242,11 +264,11 @@
                         <p>자연에서 요가를 경험하고 싶은 분!</p>
                         <p>함께 요가 수련할 친구가 필요하신 분!</p>
                     </div>
+                    <p class="className">[요가] 자연에서 하는 미라클 모닝 요가</p>
                     <div class="info">
-                        <p class="className">[요가] 자연에서 하는 미라클 모닝 요가</p>
                         <p class="classLeader"><strong>리더:</strong> 전인혜 리더</p>
-                        <p class="classTime"><strong>일정:</strong> 수요일 / 오전 6시 ~ 7시 / 총 4주</p>
-                        <p class="classPlace"><strong>장소:</strong> 엑스포 다리 아래 / 더나무요가원</p>
+                        <p class="classTime"><strong>일정:</strong> 수요일 | 오전 6시 ~ 7시 | 총 4주</p>
+                        <p class="classPlace"><strong>장소:</strong> 엑스포 다리 아래 | 더나무요가원</p>
                         <p class="classPreparation"><strong>준비물:</strong> 요가 매트, 수건, 생수</p>
                         <p class="classMission"><strong>미션1:</strong> 하루 한 끼, 클린한 식단으로 인증하기</p>
                         <p class="classMission2">매일 요가 인증하기</p>
@@ -259,10 +281,10 @@
                         <p>휴대폰 사진과 별 차이를 못 느끼신 분!</p>
                         <p>소중한 사람, 반려동물을 촬영 하고 싶은 분!</p>
                     </div>
+                    <p class="className">[사진촬영] 카메라 촬영 마스터하고 감성사진 기록하기</p>
                     <div class="info">
-                        <p class="className">[사진촬영] 카메라 촬영 마스터하고<br>감성사진 기록하기</p>
                         <p class="classLeader"><strong>리더:</strong> 김경준 리더</p>
-                        <p class="classTime"><strong>일정:</strong> 토요일 / 오전 10시 ~ 12시 / 총 4주</p>
+                        <p class="classTime"><strong>일정:</strong> 토요일 | 오전 10시 ~ 12시 | 총 4주</p>
                         <p class="classPlace"><strong>장소:</strong> 갑천근린공원 (매주 장소 변경)</p>
                         <p class="classPreparation"><strong>준비물:</strong> 개인 카메라, 필기도구</p>
                         <p class="classMission"><strong>미션1:</strong> 주제가 있는 사진으로 미션 인증하기</p>
@@ -275,10 +297,10 @@
                         <p>운동시 힙자극을 느끼기 어려운 분!</p>
                         <p>식단 관리 비법이 궁금하신 분!</p>
                     </div>
+                    <p class="className">[피트니스] 프로 비키니 선수와 3주 애플힙 프로젝트</p>
                     <div class="info">
-                        <p class="className">[피트니스] 프로 비키니 선수와 3주<br>애플힙 프로젝트</p>
                         <p class="classLeader"><strong>리더:</strong> 김민아 리더</p>
-                        <p class="classTime"><strong>일정:</strong> 일요일 / 오전 10시 ~ 11시 30분 / 총 3주</p>
+                        <p class="classTime"><strong>일정:</strong> 일요일 | 오전 10시 ~ 11시 30분 | 총 3주</p>
                         <p class="classPlace"><strong>장소:</strong> 더웰피트니스 만년</p>
                         <p class="classPreparation"><strong>준비물:</strong> 실내용 운동화, 개인 운동복</p>
                         <p class="classMission"><strong>미션1:</strong> 매일 오운완 인증하기</p>
@@ -290,23 +312,85 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <p><img src="Planet_images/yoga.jpg" alt="yoga"></p>
+                            <p>
+                                <img src="Planet_images/yoga.jpg" alt="yoga">
+                            </p>
+                            <div class="review">
+                                <p class="className">[요가] 자연에서 하는 미라클 모닝 요가</p>
+                                <p>수강후기</p>
+                                <p>바쁘다는 핑계로 미루던 운동을 요가로 다시 시작했어요.<br>동작을 수행하기 위한 기초부터 잘 알려주셔서 좋았습니다.</p>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <p><img src="Planet_images/camera_master.jpg" alt="camera_master"></p>
+                            <div class="review">
+                                <p class="className">[사진촬영] 카메라 촬영 마스터하고 감성사진 기록하기</p>
+                                <p>수강후기</p>
+                                <p>함께 사진을 찍으며 배우니깐 더 재밌었어요.<br>리더님의 빠른 피드백으로 결과물이 점점 더 좋아지는 걸 느꼈어요.</p>
+                            </div>
+                            <p>
+                                <img src="Planet_images/camera_master.jpg" alt="camera_master">
+                            </p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <p><img src="Planet_images/fitness.png" alt="fitness"></p>
+                            <p>
+                                <img src="Planet_images/fitness.png" alt="fitness">
+                            </p>
+                            <div class="review">
+                                <p class="className">[피트니스] 프로 비키니 선수와 3주 애플힙 프로젝트</p>
+                                <p>수강후기</p>
+                                <p>운동을 처음 배우는데 짧은 시간에 기대보다 만족스러운 결과를 얻었어요!<br>차근차근 설명도 잘해주세요.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+
+        <div class="class decided">            
+            <div class="class_img">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="Planet_images/running_3km.png" alt="running_3km">
+                            </p>
+                            <div class="review">
+                                <p class="className">[요가] 자연에서 하는 미라클 모닝 요가</p>
+                                <p>수강후기</p>
+                                <p>바쁘다는 핑계로 미루던 운동을 요가로 다시 시작했어요.<br>동작을 수행하기 위한 기초부터 잘 알려주셔서 좋았습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="review">
+                                <p class="className">[요가] 자연에서 하는 미라클 모닝 요가</p>
+                                <p>수강후기</p>
+                                <p>바쁘다는 핑계로 미루던 운동을 요가로 다시 시작했어요.<br>동작을 수행하기 위한 기초부터 잘 알려주셔서 좋았습니다.</p>
+                            </div>
+                            <p>
+                                <img src="Planet_images/dancing.jpg" alt="dancing">
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="Planet_images/swimming.png" alt="swimming">
+                            </p>
+                            <div class="review">
+                                <p class="className">[요가] 자연에서 하는 미라클 모닝 요가</p>
+                                <p>수강후기</p>
+                                <p>바쁘다는 핑계로 미루던 운동을 요가로 다시 시작했어요.<br>동작을 수행하기 위한 기초부터 잘 알려주셔서 좋았습니다.</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="class decided">
             <div class="class_txt">
                 <p>오픈확정 클래스</p>
                 <p>회원들이 모여 오픈이 확정된 클래스에요</p>
@@ -316,8 +400,8 @@
                         <p>부상 위험이 적은 달리기 배우고 싶은 분!</p>
                         <p>다른 러너들과 함께 달려보고 싶은 분!</p>
                     </div>
+                    <p class="className">[러닝] 엘리트 육상선수와 3km 달리기</p>
                     <div class="info">
-                        <p class="className">[러닝] 엘리트 육상선수와 3km 달리기</p>
                         <p class="classLeader"><strong>리더:</strong> 이현정 리더</p>
                         <p class="classTime"><strong>일정:</strong> 일요일 / 오전 10시 ~ 11시 30분 / 총 3주</p>
                         <p class="classPlace"><strong>장소:</strong> 관저체육공원 운동장</p>
@@ -332,8 +416,8 @@
                         <p>요즘 댄스 챌린지에 도전하고 싶은 분!</p>
                         <p>아이돌 댄스 기본기 제대로 알고 싶은 분!</p>
                     </div>
+                    <p class="className">[댄스] 놀면서 배우는 방송댄스</p>
                     <div class="info">
-                        <p class="className">[댄스] 놀면서 배우는 방송댄스</p>
                         <p class="classLeader"><strong>리더:</strong> 김지영 리더</p>
                         <p class="classTime"><strong>일정:</strong> 토요일 / 오후 7시 ~ 8시 30분 / 총 4주</p>
                         <p class="classPlace"><strong>장소:</strong> 온 연습실 탄방 / 둔산동 스탠바이 연습실</p>
@@ -348,8 +432,8 @@
                         <p>수영 기본기 제대로 익히고 싶은 분!</p>
                         <p>국가대표 출신 선수에게 배우고 싶은 분!</p>
                     </div>
+                    <p class="className">[수영] 국대 출신 선수에게 받는 영법교정</p>
                     <div class="info">
-                        <p class="className">[수영] 국대 출신 선수에게 받는 영법교정</p>
                         <p class="classLeader"><strong>리더:</strong> 최재은 리더</p>
                         <p class="classTime"><strong>일정:</strong> 토요일 / 오후 4시 ~ 5시 30분 / 총 4주</p>
                         <p class="classPlace"><strong>장소:</strong> 뉴그린 수영장</p>
@@ -359,26 +443,12 @@
                     </div>
                 </div>
             </div>
-            <div class="class_img">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <p><img src="Planet_images/running_3km.png" alt="running_3km"></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p><img src="Planet_images/dancing.jpg" alt="dancing"></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p><img src="Planet_images/swimming.png" alt="swimming"></p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </div>          
+    </div>
+    
+    <!-- <div class="con">        
+        
+        
         <div class="class ongoing">
             <div class="class_txt">
                 <p>진행중인 클래스</p>
