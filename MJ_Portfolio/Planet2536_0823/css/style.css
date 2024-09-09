@@ -95,8 +95,8 @@ div.con div.decided div.class_txt{background: linear-gradient(to bottom, #ffafbd
 div.con div.class div.class_txt > p{text-align: center;}
 div.con div.class div.class_txt > p:first-child{font-size: 50px; font-family: Happiness-Sans-Title; padding-bottom: 20px; color: #ffeeca;}
 div.con div.class div.class_txt > p:nth-child(2){font-size: 30px; font-family: Happiness-Sans-Bold;}
-div.con div.class div.class_txt div.per{position: absolute; left: 0; top: 221px; width: 100%;}
-div.con div.class div.class_txt div.per.on{display: block;}
+div.con div.class div.class_txt div.per{position: absolute; left: 0; top: 221px; width: 100%; opacity: 0; transition: 0.5s;}
+div.con div.class div.class_txt div.per.on{opacity: 1;}
 div.con div.class div.class_txt div.per div.desc{padding: 80px 0 90px; color: #ffeeca;}
 div.con div.class div.class_txt div.per div.desc p{font-size: 25px; font-family: Happiness-Sans-Bold; line-height: 40px; text-align: center;}        
 div.con div.class div.class_txt div.per p.className{font-size: 22px; font-family: Happiness-Sans-Bold; padding-bottom: 30px; word-break: keep-all; text-align: center;}
