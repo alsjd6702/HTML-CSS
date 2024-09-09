@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        p{
+            color: blue;
+            font-size: 100px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //$(document).ready(function(){
+        $(function(){
+            // $("#demo").html('<h1>제이쿼리</h1>');
+            // $("p").css("color","red").css("fontSize","32px");
+            //한단어 그리고 2개의 단어 속성이름은 꼭 따옴표가 필요
+            //속성값은 따옴표 필요
+            $("p").css({color:"red","font-size":"32px"});
+            // 위에 2개의 단어는 ""로 묶어주어야 함. 한 단어는 묶어도 안묶어도 Ok. font-size > fontSize로 대체 가능.
+            //한단어의 속성이름은 옴표 없어도 됨. 2개의 단어인 속성이름만 따옴표가 필요
+            //속성값은 따옴표 필요
+        });
+        //더 단순화하여 선택자와 ready를 생략해서 쓸 수 있음.
+        //이 자체가 문서 다 읽은 후에 실행문을 실행해라. 라는 의미를 가짐.
+        //script가 조정해서 인라인 방식으로 먼저 적용이 된다. style에 blue 이중적용이 되었지만, 우선순위가 아님.
+    </script>
+</head>
+<body>
+    <p id="demo">jQuery</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+</body>
+</html>

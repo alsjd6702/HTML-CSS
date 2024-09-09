@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){            
+            $("p:first").css("color","red");
+            $("p:nth-child(2)").css("color","red");
+            $("p:nth-child(3)").css("display","none");
+            $("p:nth-child(4)").hide();
+            $("p:nth-child(3)").css("display",""); //"none" 넣었던 것을 다시 ""로 없애주면 원래의 기본 속성으로 돌아옴.
+            $("p:nth-child(4)").show();
+            $("p:last").remove();
+            let node = $("#demo").parent().prop("nodeName");
+            console.log(node);
+        });
+    </script>
+</head>
+<body>
+    <p id="demo">jQuery</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+</body>
+</html>
