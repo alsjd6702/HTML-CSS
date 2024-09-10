@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>on</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(function(){
+			/*$("#demo").dblclick(function(){
+				$(this).text("double click");
+			}).mouseenter(function(){
+				$(this).text("mouse enter");
+			}).mouseleave(function(){
+				$(this).text("mouse leave");
+			});*/
+			/*$("#demo").on({
+				dblclick:function(){
+					$(this).text("double click");
+				},
+				mouseenter:function(){
+					$(this).text("mouse enter");
+				},
+				mouseleave:function(){
+					$(this).text("mouse leave");
+				}
+			});*/
+			/*$("#demo").click(function(){
+				$(this).text("click");
+			});*/
+			let i = 0;
+			$("#demo").on("click",function(){
+				console.log(i++);
+				if(i>=5){
+					$(this).off("click");
+				}
+			});
+			//.css("속성","속성값")
+			//.css({속성:"속성값"})
+			$("#demo1").one("click",function(){
+				console.log(i++);
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="demo">jquery</p>
+	<p id="demo1">one event</p>
+</body>
+</html>
