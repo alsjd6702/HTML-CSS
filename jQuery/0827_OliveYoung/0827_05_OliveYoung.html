@@ -11,6 +11,23 @@
 		.list li{flex: 1;cursor: pointer;}
 		.list li img{width: 100%;object-fit: cover;}
 	</style>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(function(){
+			$(".list li").hover(function(){
+				let i = $(this).index();
+				console.log(i);
+				$(".list li").each(function(index,elem){
+					console.log(elem);
+					//$(".list li").find("img").attr("src","images/img_sustain_pc_hover_1_2.jpg");
+					$(".list li").html('<img src="images/img_sustain_pc_hover_1_2.jpg" alt="pc_1">')
+				})
+					
+			},function(){
+
+			})
+		});
+	</script>
 </head>
 <body>
 	<ul class="list">
@@ -20,26 +37,5 @@
 		<li><img src="images/img_sustain_pc_4.jpg" alt="pc_4"></li>
 		<li><img src="images/img_sustain_pc_5.jpg" alt="pc_5"></li>
 	</ul>
-	<script>
-		let btn = document.querySelectorAll(".list li");
-		function myfnc(k){
-			btn.forEach(function(item,index){
-				item.querySelector("img").src = `images/img_sustain_pc_hover_${k+1}_${index+1}.jpg`;
-			});
-		}
-		function myfnc1(){
-			btn.forEach(function(item,index){
-				item.querySelector("img").src = `images/img_sustain_pc_${index+1}.jpg`;
-			});
-		}
-		btn.forEach(function(v,k){
-			v.onmouseenter = function(){
-				myfnc(k);
-			};
-			v.onmouseleave= function(){
-				myfnc1();
-			};
-		});
-	</script>
 </body>
 </html>
