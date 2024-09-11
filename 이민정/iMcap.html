@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iM캐피탈</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .wrap{
+            width: 1300px;            
+            height: 800px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .wrap ul{
+            position: absolute;
+            left: 0;
+            display: flex;
+        }
+        .wrap ul li{
+            color: #222426;
+            display: flex;
+            width: 1300px;
+            height: 800px;
+        }
+        .wrap ul li div.txt{
+            width: 530px;
+        }
+        .wrap ul li div.txt h1{
+            font-size: 75px;
+            letter-spacing: -3px;
+        }
+        .wrap ul li div.txt h2{
+            font-size: 40px;
+            padding: 16px 0;
+            box-sizing: border-box;
+        }
+        .wrap ul li div.txt p{
+            font-size: 26px;
+        }
+        .wrap ul li > p{
+            width: 724px;
+            height: 700px;
+            position: relative;
+            left: -130px;
+            top: -30px;
+        }
+        .wrap ul li > p img{
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <div class="txt">
+                    <h1>CREDIT LOAN</h1>
+                    <h2>개인신용대출</h2>
+                    <p>똑똑하고 친절한 개인금융</p>
+                </div>
+                <p>
+                    <img src="https://www.imcap.co.kr/static/web/img/main/main_obj_01.png" alt="01">
+                </p>
+            </li>
+            <li>
+                <div class="txt">
+                    <h1>AUTO FINANCE</h1>
+                    <h2>자동차 금융</h2>
+                    <p>빠르고 편리한 자동차금융</p>
+                </div>
+                <p>
+                    <img src="https://www.imcap.co.kr/static/web/img/main/main_obj_02.png" alt="02">
+                </p>
+            </li>
+            <li>
+                <div class="txt">
+                    <h1>SECURED LOAN</h1>
+                    <h2>담보대출</h2>
+                    <p>똑똑하고 친절한 개인금융</p>
+                </div>
+                <p>
+                    <img src="https://www.imcap.co.kr/static/web/img/main/main_obj_03.png" alt="03">
+                </p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let slide = document.querySelector(".wrap");
+        let slides = document.querySelector(".wrap ul");
+        let slideLi = document.querySelectorAll(".wrap ul li");
+        let current = 0;
+        let slideWidth = slide.offsetWidth;
+        let len = slideLi.length;
+
+        function makeClone() {
+            let clone_first = slideLi[0].cloneNode(true);
+            slides.append(clone_first);
+            let clone_last = slideLi[len - 1].cloneNode(true);
+            slides.prepend(clone_last);
+        }
+        makeClone();
+
+        function initfnc(){
+            slides.style.width = slideWidth * (len + 2) + "px";
+            slides.style.left = -slideWidth + "px";
+        }
+        initfnc();
+
+        document.querySelector(".wrap ul").onclick = function(){
+            if(current <= len - 1){
+                slides.style.left = -(current + 2) * slideWidth + "px";
+                slides.style.transition = "0.5s";
+            }
+            if(current == len-1){
+                setTimeout(function(){
+                    slides.style.left = -slideWidth + "px";
+                    slides.style.transition = "0s";
+                },500);
+                current = -1;
+            }
+            current++;
+        }
+        let interval = setInterval(function(){
+            document.querySelector(".wrap ul").onclick();
+        },2000);
+    </script>
+</body>
+</html>
