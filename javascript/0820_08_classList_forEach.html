@@ -33,6 +33,7 @@
                 console.log(item);
                 document.querySelectorAll("img").forEach(function(value,key){
                     value.classList.remove("on")
+                    console.log(value)
                 })
                 document.getElementsByTagName("img")[item].classList.add("on");
             }
