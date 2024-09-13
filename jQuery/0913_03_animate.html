@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <style>
+        .box{
+            height: 300px;
+        }
+        p{
+            width: 300px;
+            height: 300px;
+            background: #ccc;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ccc;
+            position: relative;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $("p").animate({width:"0",backgroundColor:"red"},1000,"linear");
+                //수치에 의한 속성만 animate이 가능하며, 아닌 것(문자)은 script src로 연결한 ui가 필요함. ex)backgroundColor:"red"
+            });
+
+            $("#move").click(function(){
+                $(".ball").animate({left:"300px"},1000).animate({top:"300px"},1000).animate({left:"0"},1000).animate({top:"0"},1000);
+            });
+            // $("#move").click(function(){
+            //     $(".ball").stop().animate({left:"300px"},1000).stop().animate({top:"300px"},1000).stop().animate({left:"0"},1000).stop().animate({top:"0"},1000);
+            // });
+
+            $("#move").trigger("click");
+            //setInterval로만은 시작 전 4초 delay가 있어서 trigger로 강제로 click이 되도록 적용함. delay가 사라짐.
+            let interval = setInterval(function(){
+                $("#move").click();
+            },4000);
+            
+            // $("#move").hover(function(){
+            //     clearInterval(interval);
+            //     //변수는 "" 넣으면 안됨.
+            // },function(){
+            //     $("#move").trigger("click");
+            //     interval = setInterval(function(){
+            //         $("#move").click();
+            //     },4000);
+            // });
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <p></p>
+    </div>
+    <button id="btn">click</button>
+    <div class="ball"></div>
+    <button id="move">move</button>
+</body>
+</html>
