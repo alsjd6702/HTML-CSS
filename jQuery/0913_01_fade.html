@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade</title>
+    <style>
+        p{
+            width: 300px;
+            height: 300px;
+            background: #ccc;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("#FadeIn").click(function(){
+                $("p").fadeIn(1000,"swing",function(){
+                    //swing이나 linear 실행속도
+                    //swing은 시작, 끝이 느리고, 중간이 빠름
+                    //linear는 일정
+                    alert("콜백함수실행");
+                });
+            });
+            $("#FadeOut").click(function(){
+                $("p").fadeOut(1000,"swing",function(){
+                    alert("콜백함수실행");
+                });
+            });
+            $("#FadeToggle").click(function(){
+                $("p").fadeToggle(1000,"swing",function(){
+                    alert("콜백함수실행");
+                });
+            });
+            //위에까지는 display:none으로 반영하여 공간까지 없어짐
+            //아래는 opacity:로 반영되며, 투명도는 0 ~ 1 설정 가능. 공간은 남아있음
+            $("#FadeTo").click(function(){
+                $("p").fadeTo(1000,0.5,"swing");
+            });
+            //콜백함수 생략 가능
+        });
+    </script>
+</head>
+<body>
+    <p></p>
+    <button id="FadeIn">FadeIn</button>
+    <button id="FadeOut">FadeOut</button>
+    <button id="FadeToggle">FadeToggle</button>
+    <button id="FadeTo">FadeTo</button>
+</body>
+</html>

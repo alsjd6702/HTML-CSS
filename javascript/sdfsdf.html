@@ -5,17 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}       
+        a{text-decoration: none;}
+        section{height: 100vh; display: flex; justify-content: center; align-items: center;}
+        section p{width: 100px; line-height: 50px; text-align: center; font-size: 20px; background: #000;}
+        section p a{display: block; width: 100%; color: #fff;}
+        div#popup{position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); border: 1px solid #000; background: #fff; width: 500px; height: 500px;}
+    </style>
 </head>
 <body>
-    <p ID="demo"></p>
+    <section>
+        <p><a href="#">클릭</a></p>
+    </section>
+    <div id="popup">
+        popup
+        <a href="#">close</a>
+    </div>
+
     <script>
-        // let y = "5";      // y is a string
-        // let x = + y;      // x is a number
-        // document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
-        let y = "John";   // y is a string
-        let x = + y;      // x is a number (NaN)
-        document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
-        document.write(x);
-    </script>       
+       let btn = document.querySelector("section p a");
+       let popup = document.querySelector("#popup");
+       let close = document.querySelector("#popup a");
+
+       popup.style.display = "none";
+       btn.onclick = function(e){
+        e.preventDefault();
+        popup.style.display = "block";
+       }
+
+       close.addEventListener("click",function(e){
+        e.preventDefault();
+        popup.style.display = "none";
+       });
+    </script>
 </body>
 </html>
