@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //$("p").remove("#demo");
+            $("p").empty();
+            //console.log($("#demo").data("num"));
+            console.log($(".test").attr("aaa","ccc"));
+            //위와 같이 무분별하게 속성을 만들어 쓰지 말고,(스스로는 알지만, 다른 사람은 알아보기 힘듬) 있는 속성인 data를 써서 custom을 해라.(다른 사람도 custom을 했구나를 알 수 있음.)
+        });
+    </script>
+</head>
+<body>
+    <p id="demo" data-num="first">문단태그</p> 
+    <p class="test" aaa="bbb">p태그입니다</p> 
+</body>
+</html>
