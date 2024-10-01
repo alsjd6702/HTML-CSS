@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비앙글로 - bienglo</title>
+    <style>
+        @font-face {
+            font-family: Cormorant-Light;
+            src: url(webfonts/Cormorant-Light.ttf) format("opentype");
+        }
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+
+        div.wrap{width: 1700px; margin: 0 auto;}
+        div.wrap h1{font-size: 80px; text-align: center; margin-bottom: 30px; font-family: Cormorant-Light;}
+        div.wrap div.contents ul.btn{display: flex; justify-content: center; gap: 50px; margin-bottom: 100px;}
+        div.wrap div.contents ul.btn li{color: #999; font-size: 22px; font-family: Cormorant-Light; border-bottom: 2px solid transparent; padding-bottom: 5px; cursor: pointer;}
+        div.wrap div.contents ul.btn li.on{color: #184100; border-bottom: 2px solid #184100;}
+        div.wrap div.contents ul.con{width: 100%; position: relative;}
+        div.wrap div.contents ul.con li{position: absolute; left: 0; top: 0; display: flex; gap: 50px; opacity: 0;}
+        div.wrap div.contents ul.con li.on{opacity: 1;}
+        div.wrap div.contents ul.con li p{width: 386px; height: 479px;}
+        div.wrap div.contents ul.con li p img{width: 100%; height: 100%; object-fit: cover;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>PRODUCTS</h1>
+        <div class="contents">
+            <ul class="btn">
+                <li>ALL</li>
+                <li>Dermasona</li>
+                <li>Hot & Cool</li>
+                <li>Haute Liang</li>
+                <li>Gel</li>
+            </ul>
+            <ul class="con">
+                <li class="con1">
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata149227_0.jpg" alt="img1-1">
+                    </p>
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata161309_0.png" alt="img1-2">
+                    </p>
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata177651_0.jpg" alt="img1-3">
+                    </p>
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata151112_0.jpg" alt="img1-4">
+                    </p>
+                </li>
+                <li class="con2">
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata149227_0.jpg" alt="img2-1">
+                    </p>
+                </li>
+                <li class="con3">
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata161309_0.png" alt="img3-2">
+                    </p>
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata177651_0.jpg" alt="img3-3">
+                    </p>
+                </li>
+                <li class="con4">
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata151112_0.jpg" alt="img4-4">
+                    </p>
+                </li>
+                <li class="con5">
+                    <p>
+                        <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata159279_0.png" alt="img5-5">
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelectorAll(".btn li");
+        let con = document.querySelectorAll(".con li");
+        btn[0].classList.add("on");
+        con[0].classList.add("on");
+
+        function myfnc(){
+            btn.forEach(function(v,k){
+                btn[k].classList.remove("on");
+                con[k].classList.remove("on");
+            });
+        };
+
+        btn.forEach(function(v,k){
+            v.onclick = function(){
+                myfnc();
+                btn[k].classList.add("on");
+                con[k].classList.add("on");
+            };
+        });
+    </script>
+</body>
+</html>
