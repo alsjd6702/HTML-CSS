@@ -8,9 +8,61 @@
     <style>
         *{margin: 0; padding: 0;}
         ul{list-style: none;}
-        a{text-decoration: none;}
+        a{text-decoration: none; color: #333;}
         
+        ul.btn{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            border-bottom: 2px solid #ccc;
+        }
+        ul.btn li{
+            border-bottom: 2px solid #000;
+        }
+        ul.btn a{
+            font-size: 32px;
+            line-height: 100px;
+        }
+        .txtwrap{
+            position: relative;
+            height: 500px;
+        }
+        .txtwrap > div{
+            position: absolute;
+            background: #fff;
+            text-align: center;
+            width: 1000px;
+            word-break: keep-all;
+            margin: 0 auto;
+        }
+        .txtwrap > div p{
+            padding: 0 140px;
+        }
+        .imgwrap{
+            width: 1000px;
+        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn li").removeClass("on");
+            $(".btn li").eq(0).addClass("on");
+            $(".txtwrap li").css("display", "none");
+            $(".txtwrap li").eq(0).css("display", "block");
+            $(".imgwrap div").css("opacity", "0");
+            $(".imgwrap div").eq(0).css("opacity", "1");
+            $(".btn li").click(function(e){
+                e.preventDefault();
+                let i = $(this).index();
+                $(".btn li").removeClass("on");
+                $(this).addClass("on");
+                $(".txtwrap li").css("display", "none");
+                $(".txtwrap li").eq(i).css("display", "block");
+                $(".imgwrap div").css("opacity", "0");
+                $(".imgwrap div").eq(i).css("opacity", "1");
+            });
+        });
+    </script>
 </head>
 <body>
     <ul class="btn">
