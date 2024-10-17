@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.wrap{
+            display: flex;
+            align-items:baseline;
+            gap: 3px;
+            height: 65.2px;
+            overflow: hidden;
+        }
+        div.wrap p,
+        div.wrap span{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        div.wrap span{
+            position: relative;
+        }
+        div.wrap span:nth-of-type(1){
+            animation: rising 1.5s cubic-bezier(0.985, 0.135, 0, 0.96) 0.5s forwards;
+        }
+        div.wrap span:nth-of-type(2){            
+            animation: rising 0.7s cubic-bezier(0.985, 0.135, 0, 0.96) 0.5s forwards;
+        }
+
+        @keyframes rising {
+            0%{top: 0;}
+            100%{top: -1370px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p>D+</p>
+        <span>
+            0<br>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7<br>
+            8<br>
+            9<br>
+            0<br>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7<br>
+            8<br>
+            9
+        </span>
+        <span>
+            0<br>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7<br>
+            8<br>
+            9<br>
+            0<br>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7<br>
+            8<br>
+            9
+        </span>
+    </div>
+</body>
+</html>
