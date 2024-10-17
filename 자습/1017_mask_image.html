@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Mask</title>
+    <style>
+	div.box {
+        width: 800px;
+        height: 400px; 
+        font-size: 7em;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-transform: Uppercase;
+        background-image: url("https://blog.kakaocdn.net/dn/euSYBp/btrHZfA7C6v/ZmOcoBN6VqMcFA57CrkBcK/img.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    div.box div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mix-blend-mode: lighten;
+        color: black;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;      
+    }
+    div.box div:nth-child(1){
+        animation: moving 5s linear infinite;
+        width: 100%;
+        height: 100%;  
+    }
+    @keyframes moving {
+        0%{left: 0;}
+        100%{left: -735px;};            
+    }
+    div.box div:nth-child(2){
+        animation: moving2 5s linear infinite;
+        height: 100%;
+    }
+    @keyframes moving2 {
+        0%{left: 800px;}
+        100%{left: 65px;}
+    }
+
+    div.box div:nth-child(2) span{
+        width: 65px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+		<div>CULTURE NIGHT</div>
+		<div>CULTURE NIGHT<span></span>CULTURE NIGHT</div>
+	</div>
+</body>
+</html>
