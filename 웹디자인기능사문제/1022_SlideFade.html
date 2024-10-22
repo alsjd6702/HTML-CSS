@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SlideLeft</title>
+    <title>SlideFade</title>
     <style>
         *{
             margin: 0;
@@ -30,16 +30,18 @@
             height: 100px;
         }
 
-        #wrap .slide{
-            font-size: 0;
+        #wrap .slide{            
             height: 300px;
-            width: 100%;
-            overflow: hidden;
+            width: 100%;            
         }
         #wrap .slide ul{
+            position: relative;
         }
         #wrap .slide ul li{
             width: 1200px;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         #wrap .slide ul li img{
             width: 100%;
@@ -51,15 +53,21 @@
     <script>
         $(function(){
 
-            function nextani(){
-                $(".slide ul").animate({marginTop: "-300px"}, 500, function(){
-                    $(".slide ul li").eq(0).appendTo(".slide ul");
-                    $(".slide ul").css({marginTop: "0"});
-                });
+            $(".slide ul li:gt(0)").fadeOut();
+            //gt는 greater than 임. 하여 위에는 index 0보다 큰 것만 fadeOut.
+
+            // function nextani(){
+            //     $(".slide ul li:first").fadeOut(500).next().fadeIn(500).end().appendTo(".slide ul");
+            //     //end(). 엔드메소드는 현재 선택된 요소 이전 요소 선택.
+            // };
+
+            function prevani(){
+                $(".slide ul li:last").fadeOut(500).prev().fadeIn(500).end().prependTo(".slide ul");
+                //end(). 엔드메소드는 현재 선택된 요소 이전 요소 선택.
             };
 
             setInterval(function(){
-                nextani();
+                prevani();
             }, 2000);
 
         });
