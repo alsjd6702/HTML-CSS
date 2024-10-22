@@ -5,9 +5,15 @@ ul {
 }
 ul li {
   display: inline-block;
+  width: 200px;
 }
 ul li a {
+  text-align: center;
+  color: red;
   display: block;
   padding: 6px 12px;
   text-decoration: none;
+}
+ul li a:hover {
+  color: blue;
 }/*# sourceMappingURL=style.css.map */
