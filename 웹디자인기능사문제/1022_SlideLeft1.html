@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideLeft</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        body{
+            font-family: Arial, 돋움, Dotum, sans-serif;
+        }
+        /* 꼭 폰트 지정해야 함. */
+
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #wrap header{
+            height: 100px;
+        }
+
+        #wrap .slide{
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+        #wrap .slide ul{
+            display: flex;
+        }
+        #wrap .slide ul li{
+            width: 1200px;
+            flex-shrink: 0;
+        }
+        #wrap .slide ul li img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+
+            function nextani(){
+                $(".slide ul").animate({marginLeft: "-1200px"}, 500, function(){
+                    $(".slide ul li").eq(0).appendTo(".slide ul");
+                    $(".slide ul").css({marginLeft: "0"});
+                });
+            };
+
+            function prevani(){
+                $(".slide ul li").eq(2).prependTo(".slide ul");
+                $(".slide ul").css({marginLeft: "-1200px"});
+                $(".slide ul").animate({marginLeft: "0"}, 500);
+            };
+
+            let interval = setInterval(function(){
+                nextani();
+            }, 2000);
+
+            $(".btn li").hover(
+                function(){
+                    clearInterval(interval);
+                }, function(){
+                    interval = setInterval(function(){
+                        nextani();
+                    }, 2000);
+                }
+            );
+            
+            $(".btn li").eq(0).click(function(){
+                prevani();
+            });
+            $(".btn li").eq(1).click(function(){
+                nextani();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div class="slide">
+            <ul>
+                <li><img src="https://cdn.pixabay.com/photo/2024/05/22/14/54/flowers-8780868_1280.jpg" alt="01"></li>
+                <li><img src="https://cdn.pixabay.com/photo/2022/12/01/04/43/girl-7628308_1280.jpg" alt="02"></li>
+                <li><img src="https://cdn.pixabay.com/photo/2023/06/14/23/12/sunset-8064078_1280.jpg" alt="03"></li>
+            </ul>
+        </div>
+        <ul class="btn">
+            <li><p>< 이전</p></li>
+            <li><p>> 다음</p></li>
+        </ul>
+    </div>
+</body>
+</html>
