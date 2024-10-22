@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideLeft</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        body{
+            font-family: Arial, 돋움, Dotum, sans-serif;
+        }
+        /* 꼭 폰트 지정해야 함. */
+
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header{
+            height: 100px;
+        }
+        .slide{
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .slide ul{
+            display: flex;
+        }
+        .slide ul li{
+            width: 1200px;
+            flex-shrink: 0;
+        }
+        .slide ul img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div class="slide">
+            <ul>
+                <li><img src="https://cdn.pixabay.com/photo/2024/05/22/14/54/flowers-8780868_1280.jpg" alt="01"></li>
+                <li><img src="https://cdn.pixabay.com/photo/2022/12/01/04/43/girl-7628308_1280.jpg" alt="02"></li>
+                <li><img src="https://cdn.pixabay.com/photo/2023/06/14/23/12/sunset-8064078_1280.jpg" alt="03"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
